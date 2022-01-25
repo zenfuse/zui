@@ -1,0 +1,24 @@
+{
+  "links": [
+    { "linkTitle": "About Us", "linkTo": "/about-us" },
+    { "linkTitle": "Partners", "linkTo": "/partners" },
+    { "linkTitle": "Bridge", "linkTo": "https://bridge.zenfuse.io/" },
+    { "linkTitle": "Token", "linkTo": "/token" }
+  ],
+  "buttonsArray": [
+    {
+      "title": "Sign in",
+      "variant": "transparent",
+      "icon": null,
+      "link": "https://app.zenfuse.io/auth/login",
+      "buttonClasses": "@fts text-14px @pg py-2 px-8"
+    },
+    {
+      "title": "Sign Up",
+      "variant": "primary",
+      "icon": "/assets/images/arrow-circle.svg",
+      "link": "https://app.zenfuse.io/auth/register",
+      "buttonClasses": "@fts text-14px @pg py-2 px-8"
+    }
+  ]
+}

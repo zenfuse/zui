@@ -1,0 +1,394 @@
+@font-face {
+  font-family: "Rubik Light";
+  src: url("https://fonts.googleapis.com/css?family=Rubik:wght@300");
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("https://fonts.googleapis.com/css?family=Rubik:wght@400");
+}
+
+@font-face {
+  font-family: "Rubik Medium";
+  src: url("https://fonts.googleapis.com/css?family=Rubik:wght@500");
+}
+
+@font-face {
+  font-family: "Rubik Bold";
+  src: url("https://fonts.googleapis.com/css?family=Rubik:wght@700");
+}
+
+@font-face {
+  font-family: "Rubik ExtraBold";
+  src: url("https://fonts.googleapis.com/css?family=Rubik:wght@800");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("https://fonts.googleapis.com/css?family=Inter:wght@400");
+}
+
+@font-face {
+  font-family: "Schoolbell";
+  src: url("../fonts/Schoolbell/Schoolbell-Regular.ttf");
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale !important; /*(For Firefox)*/
+  -webkit-font-smoothing: antialiased !important; /*(For Chrome and Safari)*/
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  max-width: 1280px;
+}
+
+.overflow-x-scroll,
+.overflow-y-scroll {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important;
+}
+
+.overflow-x-scroll::-webkit-scrollbar,
+.overflow-y-scroll::-webkit-scrollbar {
+  display: none !important;
+}
+
+.hide-scrollbar,
+.hide-scrollbar::-webkit-scrollbar {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important;
+}
+
+.font-family-rubik {
+  font-family: "Rubik";
+  font-weight: 400;
+}
+
+.font-family-rubik-light {
+  font-family: "Rubik";
+  font-weight: 300;
+}
+
+.font-family-rubik-medium {
+  font-family: "Rubik";
+  font-weight: 500;
+}
+
+.font-family-rubik-semi-bold {
+  font-family: "Rubik";
+  font-weight: 600;
+}
+
+.font-family-rubik-bold {
+  font-family: "Rubik";
+  font-weight: 700;
+}
+
+.font-family-rubik-extra-bold {
+  font-family: "Rubik";
+  font-weight: 800;
+}
+
+.font-family-inter {
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+.font-family-inter-light {
+  font-family: "Inter";
+  font-weight: 300;
+}
+
+.font-family-inter-medium {
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.font-family-inter-semi-bold {
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.font-family-inter-bold {
+  font-family: "Inter";
+  font-weight: 700;
+}
+
+.font-family-inter-extra-bold {
+  font-family: "Inter";
+  font-weight: 800;
+}
+
+.font-family-schoolbell {
+  font-family: "Schoolbell";
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.gradient-to-bottom-black {
+  background-image: linear-gradient(180deg, #151517 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.gradient-to-top-black {
+  background-image: linear-gradient(0deg, #151517 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.fire-gradient {
+  background-image: linear-gradient(45deg, #ff9a44 0%, #ff531c 100%);
+}
+
+div.rec.rec-slider div div:focus,
+div.rec.rec-slider div:focus,
+div.rec.rec-item-wrapper:focus {
+  outline: 0;
+}
+
+div.rec.rec-slider-container {
+  min-width: 119% !important;
+}
+
+div.rec.rec-item-wrapper {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.light-gradient {
+  background-image: linear-gradient(270deg, #f9f9f9 7.06%, #fefefe 96.82%);
+}
+
+.gradient-counter {
+  background: linear-gradient(104.27deg, #fdfbfb 3.26%, #fefefe 100%);
+}
+
+.shadow-counter {
+  box-shadow: inset 0px 2px 4px rgba(192, 192, 192, 0.25);
+}
+
+.bar1,
+.bar3 {
+  width: 20px;
+  height: 2px;
+  margin: 3px auto;
+  transition: 0.4s;
+}
+
+.invis {
+  width: 20px;
+  height: 2px;
+  margin: 3px auto;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-3px, 4px);
+  transform: rotate(-45deg) translate(-3px, 4px);
+}
+
+.bg-gradient-graphite {
+  background: linear-gradient(135deg, #201f24 0%, #060606 100%);
+}
+
+.bg-gradient-colorfull {
+  background: radial-gradient(
+      19.49% 58.52% at 50% 0%,
+      rgba(60, 249, 90, 0.3) 0%,
+      rgba(1, 231, 231, 0) 100%
+    ),
+    radial-gradient(
+      50% 50% at 100% 100%,
+      #6120eb 10.27%,
+      rgba(159, 115, 255, 0) 100%
+    ),
+    radial-gradient(
+      77.86% 77.86% at 100% 0%,
+      #00a7ff 0%,
+      rgba(0, 166, 254, 0.17) 100%
+    ),
+    radial-gradient(50% 50% at 0% 0%, #6cffa7 0%, rgba(6, 254, 209, 0.18) 100%),
+    radial-gradient(
+      70.24% 70.24% at 0% 100%,
+      #e81d72 0%,
+      rgba(255, 0, 0, 0) 100%
+    );
+  background-blend-mode: overlay, normal, normal, color-dodge, normal;
+  mix-blend-mode: normal;
+}
+
+.filter-blur-48px {
+  filter: blur(48px);
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-3px, -4px);
+  transform: rotate(45deg) translate(-3px, -4px);
+}
+
+.version-gradient {
+  background: linear-gradient(133.44deg, #f4faff 6.7%, #dcdffc 96.14%);
+}
+
+strong {
+  color: #0065ff;
+  font-weight: normal;
+}
+
+em {
+  background: -webkit-linear-gradient(180deg, #d886ff 2.5%, #2c9aff 96.79%);
+  -webkit-background-clip: text;
+  font-style: normal;
+  -webkit-text-fill-color: transparent;
+  font-weight: normal;
+}
+
+/* настройки слайдера */
+
+.slick-slide div {
+  outline: none;
+}
+
+.custom-slick-slider {
+  display: flex;
+  justify-content: center;
+  padding-top: 33px;
+}
+
+.custom-slick-slider li {
+  margin-right: 10px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  height: 10px;
+}
+
+.custom-slick-slider li button {
+  background-color: #c6c6c6;
+  transition: width 0.3s, background-color 0.3s;
+  outline: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.custom-slick-slider .slick-active button {
+  background-color: #f5ba0e;
+  width: 29px;
+  border-radius: 20px;
+}
+
+/* классы для тултипа */
+.tooltip-left-bottom {
+}
+
+.tooltip-left-bottom:before {
+  position: absolute;
+  z-index: 10;
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 0;
+  bottom: 0;
+  top: calc(50% - 5px);
+  left: 0;
+  box-sizing: border-box;
+
+  border: 5px solid black;
+  border-color: transparent transparent #f4f4f4 #f4f4f4;
+
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+}
+
+.tooltip-left-bottom:after {
+  z-index: -10;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-left: 0;
+  bottom: 0;
+  top: calc(50% - 5px);
+  left: 0;
+  box-sizing: border-box;
+
+  border: 5px solid #f4f4f4;
+  border-color: transparent transparent #f4f4f4 #f4f4f4;
+
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.01),
+    0px 42px 33px rgba(0, 0, 0, 0.0121168), 0px 22px 18px rgba(0, 0, 0, 0.01),
+    7px 12px 10px rgba(0, 0, 0, 0.0178832), 3px 7px 5px rgba(0, 0, 0, 0.0215656),
+    0px 3px 2px rgba(0, 0, 0, 0.03);
+}
+
+.tooltip-left-top {
+}
+
+.tooltip-right-bottom {
+}
+
+.tooltip-left-top {
+}
+
+.tooltip-bottom-right {
+}
+
+.tooltip-bottom-left {
+}
+
+.tooltip-top-right {
+}
+
+.tooltip-top-left {
+}
+
+.blur-button {
+  background: radial-gradient(
+    44.96% 391.37% at 49.64% 50%,
+    #15b9ff 2.67%,
+    #72fff7 100%
+  );
+  box-shadow: 0px 0px 29.9565px rgba(87, 215, 255, 0.5),
+    inset 0px 6.91304px 25.3478px #34b6ff,
+    inset 0px -6.91304px 9.21739px rgba(215, 255, 226, 0.81);
+  border-radius: 76.0435px;
+  background-image: url("/assets/images/blur-button-bg.png");
+  background-size: cover;
+  text-shadow: 0px 3px 8px rgba(0, 117, 255, 0.7);
+  -webkit-animation: filter-animation 6s ease infinite;
+  animation: filter-animation 6s ease infinite;
+}
+
+@-webkit-keyframes filter-animation {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  50% {
+    -webkit-filter: hue-rotate(75deg);
+  }
+
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes filter-animation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(75deg);
+  }
+
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
