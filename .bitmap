@@ -13,7 +13,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/buttons-array@0.0.67": {
+    "nightcoder.zui/src/components/buttons-array@0.0.68": {
         "files": [
             {
                 "name": "index.js",
@@ -59,7 +59,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/create-notification@0.0.68": {
+    "nightcoder.zui/src/components/create-notification@0.0.69": {
         "files": [
             {
                 "name": "index.js",
@@ -163,7 +163,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/input@0.0.94": {
+    "nightcoder.zui/src/components/input@0.0.95": {
         "files": [
             {
                 "name": "index.js",
@@ -191,7 +191,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/navbar@0.0.166": {
+    "nightcoder.zui/src/components/navbar@0.0.167": {
         "files": [
             {
                 "name": "index.js",
@@ -247,7 +247,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/popups/modal@0.0.37": {
+    "nightcoder.zui/src/components/popups/modal@0.0.38": {
         "files": [
             {
                 "name": "index.js",
@@ -275,7 +275,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/popups/notification@0.0.34": {
+    "nightcoder.zui/src/components/popups/notification@0.0.35": {
         "files": [
             {
                 "name": "SideNotificationComponent.js",
@@ -365,7 +365,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/all-icons@0.0.71": {
+    "nightcoder.zui/src/components/ui/all-icons@0.0.72": {
         "files": [
             {
                 "name": "Aim.js",
@@ -413,9 +413,9 @@
                 "test": false
             },
             {
+                "name": "BangladeshFlag.js",
                 "relativePath": "src/components/ui/all-icons/icons/BangladeshFlag.js",
-                "test": false,
-                "name": "BangladeshFlag.js"
+                "test": false
             },
             {
                 "name": "Bibox.js",
@@ -523,9 +523,9 @@
                 "test": false
             },
             {
+                "name": "ChineseFlag.js",
                 "relativePath": "src/components/ui/all-icons/icons/ChineseFlag.js",
-                "test": false,
-                "name": "ChineseFlag.js"
+                "test": false
             },
             {
                 "name": "CircleLoader.js",
@@ -578,9 +578,9 @@
                 "test": false
             },
             {
+                "name": "Confirmed.js",
                 "relativePath": "src/components/ui/all-icons/icons/Confirmed.js",
-                "test": false,
-                "name": "Confirmed.js"
+                "test": false
             },
             {
                 "name": "Copy.js",
@@ -678,9 +678,9 @@
                 "test": false
             },
             {
+                "name": "FilledCheck.js",
                 "relativePath": "src/components/ui/all-icons/icons/FilledCheck.js",
-                "test": false,
-                "name": "FilledCheck.js"
+                "test": false
             },
             {
                 "name": "Filter.js",
@@ -693,9 +693,9 @@
                 "test": false
             },
             {
+                "name": "Follow.js",
                 "relativePath": "src/components/ui/all-icons/icons/Follow.js",
-                "test": false,
-                "name": "Follow.js"
+                "test": false
             },
             {
                 "name": "Github.js",
@@ -708,9 +708,9 @@
                 "test": false
             },
             {
+                "name": "Heart.js",
                 "relativePath": "src/components/ui/all-icons/icons/Heart.js",
-                "test": false,
-                "name": "Heart.js"
+                "test": false
             },
             {
                 "name": "Hide.js",
@@ -768,9 +768,9 @@
                 "test": false
             },
             {
+                "name": "JapaneseFlag.js",
                 "relativePath": "src/components/ui/all-icons/icons/JapaneseFlag.js",
-                "test": false,
-                "name": "JapaneseFlag.js"
+                "test": false
             },
             {
                 "name": "Key.js",
@@ -798,9 +798,9 @@
                 "test": false
             },
             {
+                "name": "Lightning.js",
                 "relativePath": "src/components/ui/all-icons/icons/Lightning.js",
-                "test": false,
-                "name": "Lightning.js"
+                "test": false
             },
             {
                 "name": "LineChart.js",
@@ -868,9 +868,9 @@
                 "test": false
             },
             {
+                "name": "Message.js",
                 "relativePath": "src/components/ui/all-icons/icons/Message.js",
-                "test": false,
-                "name": "Message.js"
+                "test": false
             },
             {
                 "name": "MetaMask.js",
@@ -908,9 +908,9 @@
                 "test": false
             },
             {
+                "name": "Pencil.js",
                 "relativePath": "src/components/ui/all-icons/icons/Pencil.js",
-                "test": false,
-                "name": "Pencil.js"
+                "test": false
             },
             {
                 "name": "Peoples.js",
@@ -958,9 +958,9 @@
                 "test": false
             },
             {
+                "name": "ProfileInCircle.js",
                 "relativePath": "src/components/ui/all-icons/icons/ProfileInCircle.js",
-                "test": false,
-                "name": "ProfileInCircle.js"
+                "test": false
             },
             {
                 "name": "ProfileOutline.js",
@@ -983,19 +983,19 @@
                 "test": false
             },
             {
+                "name": "Report.js",
                 "relativePath": "src/components/ui/all-icons/icons/Report.js",
-                "test": false,
-                "name": "Report.js"
+                "test": false
             },
             {
+                "name": "RhombusInCircle.js",
                 "relativePath": "src/components/ui/all-icons/icons/RhombusInCircle.js",
-                "test": false,
-                "name": "RhombusInCircle.js"
+                "test": false
             },
             {
+                "name": "RussianFlag.js",
                 "relativePath": "src/components/ui/all-icons/icons/RussianFlag.js",
-                "test": false,
-                "name": "RussianFlag.js"
+                "test": false
             },
             {
                 "name": "Search.js",
@@ -1008,9 +1008,9 @@
                 "test": false
             },
             {
+                "name": "Share.js",
                 "relativePath": "src/components/ui/all-icons/icons/Share.js",
-                "test": false,
-                "name": "Share.js"
+                "test": false
             },
             {
                 "name": "Shield.js",
@@ -1025,6 +1025,11 @@
             {
                 "name": "SmallLoader.js",
                 "relativePath": "src/components/ui/all-icons/icons/SmallLoader.js",
+                "test": false
+            },
+            {
+                "name": "Smile.js",
+                "relativePath": "src/components/ui/all-icons/icons/Smile.js",
                 "test": false
             },
             {
@@ -1068,9 +1073,9 @@
                 "test": false
             },
             {
+                "name": "TikTok.js",
                 "relativePath": "src/components/ui/all-icons/icons/TikTok.js",
-                "test": false,
-                "name": "TikTok.js"
+                "test": false
             },
             {
                 "name": "TokenPocket.js",
@@ -1103,9 +1108,9 @@
                 "test": false
             },
             {
+                "name": "TurkeyFlag.js",
                 "relativePath": "src/components/ui/all-icons/icons/TurkeyFlag.js",
-                "test": false,
-                "name": "TurkeyFlag.js"
+                "test": false
             },
             {
                 "name": "Twitter.js",
@@ -1133,9 +1138,9 @@
                 "test": false
             },
             {
+                "name": "Upload.js",
                 "relativePath": "src/components/ui/all-icons/icons/Upload.js",
-                "test": false,
-                "name": "Upload.js"
+                "test": false
             },
             {
                 "name": "UserIcon.js",
@@ -1143,9 +1148,9 @@
                 "test": false
             },
             {
+                "name": "Wallet.js",
                 "relativePath": "src/components/ui/all-icons/icons/Wallet.js",
-                "test": false,
-                "name": "Wallet.js"
+                "test": false
             },
             {
                 "name": "WalletConnect.js",
@@ -1158,9 +1163,9 @@
                 "test": false
             },
             {
+                "name": "ZenfuseTitle.js",
                 "relativePath": "src/components/ui/all-icons/icons/ZenfuseTitle.js",
-                "test": false,
-                "name": "ZenfuseTitle.js"
+                "test": false
             },
             {
                 "name": "ZeroBlance.js",
@@ -1201,12 +1206,12 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/buttons/button@0.0.29": {
+    "nightcoder.zui/src/components/ui/buttons/button@0.0.30": {
         "files": [
             {
+                "name": "index.js",
                 "relativePath": "src/components/ui/buttons/button/index.js",
-                "test": false,
-                "name": "index.js"
+                "test": false
             }
         ],
         "mainFile": "src/components/ui/buttons/button/index.js",
@@ -1226,19 +1231,19 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/buttons/multi-icons-button@0.0.11": {
+    "nightcoder.zui/src/components/ui/buttons/multi-icons-button@0.0.12": {
         "files": [
             {
+                "name": "index.js",
                 "relativePath": "src/components/ui/buttons/multi-icons-button/index.js",
-                "test": false,
-                "name": "index.js"
+                "test": false
             }
         ],
         "mainFile": "src/components/ui/buttons/multi-icons-button/index.js",
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/checkbox@0.0.50": {
+    "nightcoder.zui/src/components/ui/checkbox@0.0.51": {
         "files": [
             {
                 "name": "index.js",
@@ -1323,7 +1328,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/form-input@0.0.84": {
+    "nightcoder.zui/src/components/ui/form-input@0.0.85": {
         "files": [
             {
                 "name": "index.js",
@@ -1390,7 +1395,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/side-notification@0.0.36": {
+    "nightcoder.zui/src/components/ui/side-notification@0.0.37": {
         "files": [
             {
                 "name": "index.js",
@@ -1421,7 +1426,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/toggle-buttons@0.0.41": {
+    "nightcoder.zui/src/components/ui/toggle-buttons@0.0.42": {
         "files": [
             {
                 "name": "index.js",
