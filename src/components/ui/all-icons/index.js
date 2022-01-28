@@ -160,6 +160,7 @@ import ProfileInCircle from "./icons/ProfileInCircle";
 import FilledCheck from "./icons/FilledCheck";
 import TikTok from "./icons/TikTok";
 import Smile from "./icons/Smile";
+import SimpleArrow from "./icons/SimpleArrow";
 
 export const icons = {
   Bin,
@@ -322,6 +323,7 @@ export const icons = {
   FilledCheck,
   TikTok,
   Smile,
+  SimpleArrow,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
