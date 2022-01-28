@@ -161,6 +161,10 @@ import FilledCheck from "./icons/FilledCheck";
 import TikTok from "./icons/TikTok";
 import Smile from "./icons/Smile";
 import SimpleArrow from "./icons/SimpleArrow";
+import Like from "./icons/Like";
+import LikeFilled from "./icons/LikeFilled";
+import Dislike from "./icons/Dislike";
+import DislikeFilled from "./icons/DislikeFilled";
 
 export const icons = {
   Bin,
@@ -324,6 +328,10 @@ export const icons = {
   TikTok,
   Smile,
   SimpleArrow,
+  Like,
+  LikeFilled,
+  Dislike,
+  DislikeFilled,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {

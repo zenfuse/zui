@@ -13,7 +13,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/buttons-array@0.0.69": {
+    "nightcoder.zui/src/components/buttons-array@0.0.70": {
         "files": [
             {
                 "name": "index.js",
@@ -59,7 +59,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/create-notification@0.0.70": {
+    "nightcoder.zui/src/components/create-notification@0.0.71": {
         "files": [
             {
                 "name": "index.js",
@@ -163,7 +163,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/input@0.0.96": {
+    "nightcoder.zui/src/components/input@0.0.97": {
         "files": [
             {
                 "name": "index.js",
@@ -191,7 +191,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/navbar@0.0.168": {
+    "nightcoder.zui/src/components/navbar@0.0.169": {
         "files": [
             {
                 "name": "index.js",
@@ -247,7 +247,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/popups/modal@0.0.39": {
+    "nightcoder.zui/src/components/popups/modal@0.0.40": {
         "files": [
             {
                 "name": "index.js",
@@ -275,7 +275,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/popups/notification@0.0.36": {
+    "nightcoder.zui/src/components/popups/notification@0.0.37": {
         "files": [
             {
                 "name": "SideNotificationComponent.js",
@@ -365,7 +365,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/all-icons@0.0.73": {
+    "nightcoder.zui/src/components/ui/all-icons@0.0.74": {
         "files": [
             {
                 "name": "Aim.js",
@@ -618,6 +618,16 @@
                 "test": false
             },
             {
+                "relativePath": "src/components/ui/all-icons/icons/Dislike.js",
+                "test": false,
+                "name": "Dislike.js"
+            },
+            {
+                "relativePath": "src/components/ui/all-icons/icons/DislikeFilled.js",
+                "test": false,
+                "name": "DislikeFilled.js"
+            },
+            {
                 "name": "DnD.js",
                 "relativePath": "src/components/ui/all-icons/icons/DnD.js",
                 "test": false
@@ -801,6 +811,16 @@
                 "name": "Lightning.js",
                 "relativePath": "src/components/ui/all-icons/icons/Lightning.js",
                 "test": false
+            },
+            {
+                "relativePath": "src/components/ui/all-icons/icons/Like.js",
+                "test": false,
+                "name": "Like.js"
+            },
+            {
+                "relativePath": "src/components/ui/all-icons/icons/LikeFilled.js",
+                "test": false,
+                "name": "LikeFilled.js"
             },
             {
                 "name": "LineChart.js",
@@ -1211,7 +1231,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/buttons/button@0.0.31": {
+    "nightcoder.zui/src/components/ui/buttons/button@0.0.32": {
         "files": [
             {
                 "name": "index.js",
@@ -1236,7 +1256,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/buttons/multi-icons-button@0.0.13": {
+    "nightcoder.zui/src/components/ui/buttons/multi-icons-button@0.0.14": {
         "files": [
             {
                 "name": "index.js",
@@ -1248,7 +1268,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/checkbox@0.0.52": {
+    "nightcoder.zui/src/components/ui/checkbox@0.0.53": {
         "files": [
             {
                 "name": "index.js",
@@ -1333,7 +1353,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/form-input@0.0.86": {
+    "nightcoder.zui/src/components/ui/form-input@0.0.87": {
         "files": [
             {
                 "name": "index.js",
@@ -1400,7 +1420,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/side-notification@0.0.38": {
+    "nightcoder.zui/src/components/ui/side-notification@0.0.39": {
         "files": [
             {
                 "name": "index.js",
@@ -1431,7 +1451,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/toggle-buttons@0.0.43": {
+    "nightcoder.zui/src/components/ui/toggle-buttons@0.0.44": {
         "files": [
             {
                 "name": "index.js",
