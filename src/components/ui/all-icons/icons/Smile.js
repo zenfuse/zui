@@ -7,7 +7,7 @@ const Smile = ({ className }) => (
     xmlns="http://www.w3.org/2000/svg"
     className={`stroke-current ${className}`}
   >
-    <circle cx="10" cy="10" r="8.5" strokeЦidth="1.5" />
+    <circle cx="10" cy="10" r="8.5" strokeWidth="1.5" />
     <path
       d="M7.71436 11.1428C8.31315 11.9412 9.00208 12.2857 10.0001 12.2857C10.9981 12.2857 11.687 11.9412 12.2858 11.1428"
       strokeWidth="1.5"
