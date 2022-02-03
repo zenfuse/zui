@@ -78,7 +78,7 @@ Default.args = {
     },
     {
       variant: "confetti",
-      title: "I want to the team!",
+      title: "I want to join the team!",
       link: "https://zenfuse.io",
       linkProps: [
         {

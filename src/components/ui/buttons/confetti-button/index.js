@@ -121,7 +121,7 @@ const ConfettiButton = ({ className, title, link }) => {
               />
             </svg>
           </animated.div>
-          {title && <p>{title}</p>}
+          {title && <p style={{ transform: "translateX(5px)" }}>{title}</p>}
         </div>
       </a>
     </Link>

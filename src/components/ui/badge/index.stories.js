@@ -1,5 +1,5 @@
 import React from "react";
-import Badge from './index'
+import Badge from "./index";
 
 export default {
   component: Badge,
@@ -9,13 +9,11 @@ export default {
   ],
 };
 
-const Template = (args) => (
-  <Badge {...args}  />
-);
+const Template = (args) => <Badge {...args} />;
 
 export const Default = Template.bind({});
 
 Default.args = {
-  text: 'LEON VERSION COMING SOON',
-  image: '/assets/images/lion.png'
+  text: "LEON VERSION COMING SOON",
+  image: "/assets/images/lion.png",
 };
