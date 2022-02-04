@@ -165,6 +165,9 @@ import Like from "./icons/Like";
 import LikeFilled from "./icons/LikeFilled";
 import Dislike from "./icons/Dislike";
 import DislikeFilled from "./icons/DislikeFilled";
+import Landscape from "./icons/Landscape";
+import Chart from "./icons/Chart";
+import Warning from "./icons/Warning";
 
 export const icons = {
   Bin,
@@ -332,6 +335,9 @@ export const icons = {
   LikeFilled,
   Dislike,
   DislikeFilled,
+  Landscape,
+  Chart,
+  Warning,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
