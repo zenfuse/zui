@@ -20,10 +20,8 @@ const ToggleButtons = ({
 
   const defaultButtonSrClasses = useStyleRewriter(
     `${defaultButtonClasses} ${buttonClasses} ${baseClasses}`,
-    "@brw border-0"
+    buttonClassName
   );
-
-  console.log(defaultButtonSrClasses);
 
   const activeButtonSrClasses = useStyleRewriter(
     `${activeButtonClasses} ${buttonClasses} ${baseClasses}`,
