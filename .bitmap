@@ -1466,7 +1466,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/toggle-buttons@0.0.47": {
+    "nightcoder.zui/src/components/ui/toggle-buttons@0.0.48": {
         "files": [
             {
                 "name": "index.js",
