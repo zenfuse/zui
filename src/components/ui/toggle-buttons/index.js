@@ -86,7 +86,8 @@ export default ToggleButtons;
 
 const containerClasses = "bg-true-gray-100 dark:bg-true-gray-900 rounded-8px";
 const buttonClasses =
-  "border-px flex flex-shrink-0 justify-center items-center h-8 rounded-8px focus:outline-none";
-const defaultButtonClasses = "bg-white dark:bg-true-gray-800 border-gray-medium dark:border-true-gray-750 shadow-sm dark:shadow-dark-100";
+  "@brw border-px flex flex-shrink-0 justify-center items-center h-8 rounded-8px focus:outline-none";
+const defaultButtonClasses =
+  "bg-white dark:bg-true-gray-800 border-gray-medium dark:border-true-gray-750 shadow-sm dark:shadow-dark-100";
 const activeButtonClasses = "bg-transparent border-transparent";
 const defaultTextClasses = "text-12px leading-18px ";
