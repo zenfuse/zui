@@ -172,6 +172,7 @@ import Post from "./icons/Post";
 import PieChart from "./icons/PieChart";
 import Order from "./icons/Order";
 import EditOutline from "./icons/EditOutline";
+import Compass from "./icons/Compass";
 
 export const icons = {
   Bin,
@@ -346,6 +347,7 @@ export const icons = {
   PieChart,
   Order,
   EditOutline,
+  Compass,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {

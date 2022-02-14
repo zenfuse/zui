@@ -13,7 +13,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/buttons-array@0.0.74": {
+    "nightcoder.zui/src/components/buttons-array@0.0.75": {
         "files": [
             {
                 "name": "index.js",
@@ -59,7 +59,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/create-notification@0.0.74": {
+    "nightcoder.zui/src/components/create-notification@0.0.75": {
         "files": [
             {
                 "name": "index.js",
@@ -163,7 +163,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/input@0.0.100": {
+    "nightcoder.zui/src/components/input@0.0.101": {
         "files": [
             {
                 "name": "index.js",
@@ -191,7 +191,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/navbar@0.0.173": {
+    "nightcoder.zui/src/components/navbar@0.0.174": {
         "files": [
             {
                 "name": "index.js",
@@ -247,7 +247,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/popups/modal@0.0.43": {
+    "nightcoder.zui/src/components/popups/modal@0.0.44": {
         "files": [
             {
                 "name": "index.js",
@@ -275,7 +275,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/popups/notification@0.0.40": {
+    "nightcoder.zui/src/components/popups/notification@0.0.41": {
         "files": [
             {
                 "name": "SideNotificationComponent.js",
@@ -365,7 +365,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/all-icons@0.0.77": {
+    "nightcoder.zui/src/components/ui/all-icons@0.0.78": {
         "files": [
             {
                 "name": "Aim.js",
@@ -571,6 +571,11 @@
                 "name": "Coinbase.js",
                 "relativePath": "src/components/ui/all-icons/icons/Coinbase.js",
                 "test": false
+            },
+            {
+                "relativePath": "src/components/ui/all-icons/icons/Compass.js",
+                "test": false,
+                "name": "Compass.js"
             },
             {
                 "name": "Compound.js",
@@ -1266,7 +1271,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/buttons/button@0.0.36": {
+    "nightcoder.zui/src/components/ui/buttons/button@0.0.37": {
         "files": [
             {
                 "name": "index.js",
@@ -1291,7 +1296,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/buttons/multi-icons-button@0.0.17": {
+    "nightcoder.zui/src/components/ui/buttons/multi-icons-button@0.0.18": {
         "files": [
             {
                 "name": "index.js",
@@ -1303,7 +1308,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/checkbox@0.0.56": {
+    "nightcoder.zui/src/components/ui/checkbox@0.0.57": {
         "files": [
             {
                 "name": "index.js",
@@ -1388,7 +1393,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/form-input@0.0.90": {
+    "nightcoder.zui/src/components/ui/form-input@0.0.91": {
         "files": [
             {
                 "name": "index.js",
@@ -1455,7 +1460,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/side-notification@0.0.42": {
+    "nightcoder.zui/src/components/ui/side-notification@0.0.43": {
         "files": [
             {
                 "name": "index.js",
@@ -1486,7 +1491,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/toggle-buttons@0.0.50": {
+    "nightcoder.zui/src/components/ui/toggle-buttons@0.0.51": {
         "files": [
             {
                 "name": "index.js",
