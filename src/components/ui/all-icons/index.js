@@ -168,6 +168,10 @@ import DislikeFilled from "./icons/DislikeFilled";
 import Landscape from "./icons/Landscape";
 import Chart from "./icons/Chart";
 import Warning from "./icons/Warning";
+import Post from "./icons/Post";
+import PieChart from "./icons/PieChart";
+import Order from "./icons/Order";
+import EditOutline from "./icons/EditOutline";
 
 export const icons = {
   Bin,
@@ -338,6 +342,10 @@ export const icons = {
   Landscape,
   Chart,
   Warning,
+  Post,
+  PieChart,
+  Order,
+  EditOutline,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
