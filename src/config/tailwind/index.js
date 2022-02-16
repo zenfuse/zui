@@ -1,24 +1,25 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === "production",
-    mode: "layers",
-    layers: ["components", "utilities"],
-    content: [
-      "./src/components/**/*.js",
-      "./src/components/**/**/*.js",
-      "./src/page-blocks/**/*.js",
-      "./src/page-blocks/**/**/*.js",
-      "./pages/*.js",
-      "./pages/**/*.js",
-      "./node_modules/@bit/**/*.js",
-      "./node_modules/@bit/**/**/*.js",
-      "./node_modules/@bit/**/**/**/*.js",
-      "./node_modules/@bit/**/**/**/**/*.js",
-      "./node_modules/@bit/**/**/**/**/**/*.js",
-    ],
-  },
+  content: [
+    "./src/components/**/*.js",
+    "./src/components/**/**/*.js",
+    "./src/page-blocks/**/*.js",
+    "./src/page-blocks/**/**/*.js",
+    "./pages/*.js",
+    "./pages/**/*.js",
+    "./node_modules/@bit/**/*.js",
+    "./node_modules/@bit/**/**/*.js",
+    "./node_modules/@bit/**/**/**/*.js",
+    "./node_modules/@bit/**/**/**/**/*.js",
+    "./node_modules/@bit/**/**/**/**/**/*.js",
+  ],
+  // purge: {
+  //   enabled: process.env.NODE_ENV === "production",
+  //   mode: "layers",
+  //   layers: ["components", "utilities"],
+    
+  // },
   prefix: "",
   important: false,
   separator: ":",
@@ -41,7 +42,7 @@ module.exports = {
         pearl: "#eff2f5",
 
         "cool-gray": {
-          ...colors.coolGray,
+          ...colors.gray,
           150: "#f1f2f6",
         },
         gray: {
@@ -62,7 +63,7 @@ module.exports = {
           dark: "#a0a0a0",
         },
         "true-gray": {
-          ...colors.trueGray,
+          ...colors.neutral,
           100: "#f5f5f5",
           150: "#ebebeb",
           300: "#d4d4d4",

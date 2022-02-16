@@ -8,10 +8,17 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-actions/register",
     "@storybook/addon-knobs/register",
-    "@storybook/addon-notes/register",
+    "@storybook/addon-docs/register",
     "@storybook/addon-knobs",
     "@storybook/addon-links",
-    "@storybook/addon-notes",
+    {
+      name: "@storybook/addon-postcss",
+      options: {
+        postcssLoaderOptions: {
+          implementation: require("postcss"),
+        },
+      },
+    },
   ],
   webpackFinal: (config) => {
     // config.plugins.push(new MiniCssExtractPlugin());
