@@ -7,7 +7,7 @@ export default {
   component: ButtonsArray,
   title: "Components/ButtonsArray",
   decorators: [
-    withNextRouter,
+    // withNextRouter,
     (story) => (
       <div className="w-full mx-auto container flex items-center justify-center mt-40">
         {story()}
@@ -17,6 +17,17 @@ export default {
 };
 
 const Template = (args) => <ButtonsArray {...args} />;
+Template.story = {
+  parameters: {
+    nextRouter: {
+      path: "/profile/[id]",
+      asPath: "/profile/lifeiscontent",
+      query: {
+        id: "lifeiscontent",
+      },
+    },
+  },
+};
 
 export const Default = Template.bind({});
 

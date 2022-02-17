@@ -5,6 +5,7 @@ module.exports = {
     "../src/components/ui/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
+    "storybook-addon-next-router",
     "@storybook/addon-essentials",
     "@storybook/addon-actions/register",
     "@storybook/addon-knobs/register",
