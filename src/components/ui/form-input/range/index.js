@@ -30,11 +30,11 @@ const Range = ({
             style={{
               left: `${(value / maxValue) * 100}%`
             }}
-            className="h-3 w-3 rounded-full bg-blue-650 absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 z-50"
+            className="h-3 w-3 rounded-full bg-blue-650 absolute top-1/2 -translate-y-1/2 -translate-x-1/2 z-50"
           >
             <div
               className={
-                "absolute h-2 w-2 rounded-full bg-white left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2"
+                "absolute h-2 w-2 rounded-full bg-white left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2"
               }
             />
           </div>
@@ -52,12 +52,12 @@ const Range = ({
                 left: `${(value / maxValue) * 100}%`
               }}
               className={
-                "opacity-0 group-hover:opacity-100 absolute -top-10 bg-blue-650 text-white text-xs left-1/2 transform -translate-x-1/2 p-1 rounded-4px"
+                "opacity-0 group-hover:opacity-100 absolute -top-10 bg-blue-650 text-white text-xs left-1/2 -translate-x-1/2 p-1 rounded-4px"
               }
             >
               <div
                 className={
-                  "absolute -bottom-1 bg-blue-650 left-1/2 transform -translate-x-1/2 rotate-45 w-2 h-2 rounded-1px"
+                  "absolute -bottom-1 bg-blue-650 left-1/2 -translate-x-1/2 rotate-45 w-2 h-2 rounded-1px"
                 }
               />
               {((value / maxValue) * 100).toFixed(0)}%
@@ -104,7 +104,7 @@ const Datalist = ({id, range, value}) => {
             borderRadius: "50%",
             minHeight: "12px"
           }}
-          className={`relative top-1/2 transform -translate-y-1/2`}
+          className={`relative top-1/2 -translate-y-1/2`}
           key={index}
           value={item}
         />

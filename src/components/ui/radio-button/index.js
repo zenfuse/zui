@@ -21,7 +21,7 @@ const RadioButton = ({
       >
         <div className="relative h-full w-full">
           <div
-            className={`absolute transform duration-200 ${
+            className={`absolute duration-200 ${
               active ? "translate-x-full bg-white" : "translate-x-0 bg-white dark:bg-true-gray-700"
             } w-1/2 pb-1/2 rounded-full shadow-md`}
           ></div>

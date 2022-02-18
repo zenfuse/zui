@@ -35,7 +35,7 @@ const Footer = ({ pageBlockData, absoluteUrl = false }) => {
                   {socialLinks.map((socialLink, index) => (
                     <SmartButton
                       key={index}
-                      className="@fx flex @ani items-center @jyc justify-center @wh w-5 @ht h-5 @fxs flex-shrink-0 @oy opacity-40 hover:opacity-100 @tndn duration-200"
+                      className="@fx flex @ani items-center @jyc justify-center @wh w-5 @ht h-5 @fxs -0 @oy opacity-40 hover:opacity-100 @tndn duration-200"
                       href={R.prop("linkTo", socialLink) || "/"}
                       linkProps={R.prop("linkProps", socialLink)}
                     >

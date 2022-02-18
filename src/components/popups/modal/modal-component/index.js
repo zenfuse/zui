@@ -19,7 +19,7 @@ const ModalComponent = ({
   const [showLayout, setShowLayout] = useState(show);
   const srLayoutClasses = useStyleRewriter(baseLayoutClasses, layoutClasses);
   const srPopupWindowClasses = useStyleRewriter(
-    "@pre pointer-events-auto @tnp transition @tm transform z-40 @pn relative",
+    "@pre pointer-events-auto @tnp transition z-40 @pn relative",
     popupWindowClasses
   );
   const srContainerClasses = useStyleRewriter(
@@ -75,7 +75,7 @@ const ModalComponent = ({
           </div>
         </TransitionElement>
         <TransitionElement
-          baseClasses={`pointer-events-auto transition duration-${duration} transform z-40 relative`}
+          baseClasses={`pointer-events-auto transition duration-${duration} z-40 relative`}
           show={show}
           id={"modal"}
           changePopup={setShow}

@@ -54,7 +54,7 @@ Default.args = {
   dropdownContainerClasses: "@it left-1 top-full",
   tooltipItems: TooltipItems,
   tooltipContainerClasses:
-    "@it left-0 bottom-full @mn mb-4 transform origin-left",
+    "@it left-0 bottom-full @mn mb-4 origin-left",
   onClick: (e) => console.log(e),
 };
 

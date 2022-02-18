@@ -10,4 +10,4 @@ const CircleDivider = ({ className, children, variant }) => {
 
 export default CircleDivider;
 
-const baseClasses = "w-1 h-1 flex flex-shrink-0 bg-gray-500 mx-2 rounded-20px ";
+const baseClasses = "w-1 h-1 flex shrink-0 bg-gray-500 mx-2 rounded-20px ";

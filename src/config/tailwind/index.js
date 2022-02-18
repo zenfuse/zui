@@ -14,12 +14,6 @@ module.exports = {
     "./node_modules/@bit/**/**/**/**/*.js",
     "./node_modules/@bit/**/**/**/**/**/*.js",
   ],
-  // purge: {
-  //   enabled: process.env.NODE_ENV === "production",
-  //   mode: "layers",
-  //   layers: ["components", "utilities"],
-    
-  // },
   prefix: "",
   important: false,
   separator: ":",
@@ -563,19 +557,6 @@ module.exports = {
         "span-15": "span 15 / span 15",
         "span-16": "span 16 / span 16",
       },
-    },
-  },
-  variants: {
-    extend: {
-      transform: ["group-hover"],
-      scale: ["active", "group-hover"],
-      rotate: ["group-hover"],
-      backgroundColor: ["active"],
-      ringOffsetWidth: ["hover", "active"],
-      ringOffsetColor: ["hover", "active"],
-      ringColor: ["hover", "active"],
-      borderWidth: ["last"],
-      margin: ["last", "first"],
     },
   },
   corePlugins: {},
