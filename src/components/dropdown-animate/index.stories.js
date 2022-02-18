@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { withNextRouter } from "storybook-addon-next-router";
 import DropdownAnimate from "./index";
 import SmartButton from "../smart-button";
 
@@ -7,7 +6,6 @@ export default {
   component: DropdownAnimate,
   title: "Animations/Dropdown",
   decorators: [
-    withNextRouter,
     (story) => <div className="w-64 mx-auto mt-40">{story()}</div>,
   ],
 };

@@ -1,13 +1,11 @@
 import React, { useRef } from "react";
 import SmartButton from "./index";
-import { withNextRouter } from "storybook-addon-next-router";
 import useDetectOutsideClick from "../../functions/hooks/use-detect-outsideclick";
 
 export default {
   component: SmartButton,
   title: "Buttons/SmartButton",
   decorators: [
-    withNextRouter,
     (story) => <div className="w-fit mx-auto mt-40">{story()}</div>,
   ],
 };

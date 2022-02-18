@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import LineChart from "./index";
-import { withNextRouter } from "storybook-addon-next-router";
 import mock from "./mock.json";
 
 export default {
   component: LineChart,
   title: "Components/Charts/LineChart",
-  decorators: [withNextRouter, (story) => <div className="">{story()}</div>],
+  decorators: [(story) => <div className="">{story()}</div>],
   argTypes: {
     xAxisDisplay: {
       control: { type: "boolean" },
