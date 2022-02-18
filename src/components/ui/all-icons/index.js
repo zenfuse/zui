@@ -173,6 +173,7 @@ import PieChart from "./icons/PieChart";
 import Order from "./icons/Order";
 import EditOutline from "./icons/EditOutline";
 import Compass from "./icons/Compass";
+import Union from "./icons/Union";
 
 export const icons = {
   Bin,
@@ -348,6 +349,7 @@ export const icons = {
   Order,
   EditOutline,
   Compass,
+  Union,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
