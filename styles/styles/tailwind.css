@@ -365,6 +365,23 @@ em {
   animation: filter-animation 6s ease infinite;
 }
 
+.action-button {
+  background: linear-gradient(270deg, #B2DF00 0%, #7EE100 100%);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.action-button:hover {
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.0217013), 
+  0px 18.2508px 14.6007px rgba(0, 0, 0, 0.0310596), 
+  0px 8.86044px 7.08835px rgba(0, 0, 0, 0.0389404), 
+  0px 4.34355px 3.47484px rgba(0, 0, 0, 0.0482987), 
+  0px 1.71745px 1.37396px rgba(0, 0, 0, 0.07);
+}
+.action-button p {
+  filter: drop-shadow(0px 2px 2px rgb(0 0 0 / 0.1));
+}
+
 @-webkit-keyframes filter-animation {
   0% {
     -webkit-filter: hue-rotate(0deg);

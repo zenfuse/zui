@@ -99,6 +99,7 @@ import Calendar from "./icons/Calendar";
 import CurvedLine from "./icons/CurvedLine";
 import Dominance from "./icons/Dominance";
 import Coin from "./icons/Coin";
+import CoinConvex from "./icons/CoinConvex";
 import Hourly from "./icons/Hourly";
 import Daily from "./icons/Daily";
 import SquareArrow from "./icons/SquareArrow";
@@ -181,6 +182,7 @@ export const icons = {
   BoldArrow,
   Ethereum,
   MetaMask,
+  CoinConvex,
   Success,
   Failure,
   Exclamation,

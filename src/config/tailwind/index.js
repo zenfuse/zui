@@ -75,6 +75,10 @@ module.exports = {
           900: "#171717",
           950: "#101010",
         },
+        "lime": {
+          ...colors.lime,
+          
+        },
         red: {
           base: "#fc3d30",
           100: "#fff5f5",
