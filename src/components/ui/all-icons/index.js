@@ -175,6 +175,8 @@ import Order from "./icons/Order";
 import EditOutline from "./icons/EditOutline";
 import Compass from "./icons/Compass";
 import Union from "./icons/Union";
+import NotificationSuccess from "./icons/NotificationSuccess";
+import NotificationError from "./icons/NotificationError";
 
 export const icons = {
   Bin,
@@ -352,6 +354,8 @@ export const icons = {
   EditOutline,
   Compass,
   Union,
+  NotificationSuccess,
+  NotificationError,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {

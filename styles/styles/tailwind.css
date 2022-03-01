@@ -23,9 +23,41 @@
   src: url("https://fonts.googleapis.com/css?family=Rubik:wght@800");
 }
 
+/* INTER */
+
+@font-face {
+  font-family: "Inter Light";
+  src: url("../fonts/Inter/Inter-Light.ttf");
+}
+
 @font-face {
   font-family: "Inter";
-  src: url("https://fonts.googleapis.com/css?family=Inter:wght@400");
+  src: url("../fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter Medium";
+  src: url("../fonts/Inter/Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("../fonts/Inter/Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inter SemiBold";
+  src: url("../fonts/Inter/Inter-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Inter ExtraBold";
+  src: url("../fonts/Inter/Inter-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Inter Black";
+  src: url("../fonts/Inter/Inter-Black.ttf");
 }
 
 @font-face {
@@ -93,35 +125,44 @@ html {
   font-weight: 800;
 }
 
-.font-family-inter {
-  font-family: "Inter";
-  font-weight: 400;
-}
+/* Start Inter */
 
 .font-family-inter-light {
-  font-family: "Inter";
+  font-family: "Inter Light", sans-serif;
   font-weight: 300;
 }
 
+.font-family-inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
 .font-family-inter-medium {
-  font-family: "Inter";
+  font-family: "Inter Medium", sans-serif;
   font-weight: 500;
 }
 
 .font-family-inter-semi-bold {
-  font-family: "Inter";
+  font-family: "Inter SemiBold", sans-serif;
   font-weight: 600;
 }
 
 .font-family-inter-bold {
-  font-family: "Inter";
+  font-family: "Inter Bold", sans-serif;
   font-weight: 700;
 }
 
 .font-family-inter-extra-bold {
-  font-family: "Inter";
+  font-family: "Inter ExtraBold", sans-serif;
   font-weight: 800;
 }
+
+.font-family-inter-black {
+  font-family: "Inter Black", sans-serif;
+  font-weight: 900;
+}
+
+/* END Inter */
 
 .font-family-schoolbell {
   font-family: "Schoolbell";
@@ -366,17 +407,17 @@ em {
 }
 
 .action-button {
-  background: linear-gradient(270deg, #B2DF00 0%, #7EE100 100%);
+  background: linear-gradient(270deg, #b2df00 0%, #7ee100 100%);
   border: 3px solid rgba(255, 255, 255, 0.5);
 }
 
 .action-button:hover {
   border: 3px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.0217013), 
-  0px 18.2508px 14.6007px rgba(0, 0, 0, 0.0310596), 
-  0px 8.86044px 7.08835px rgba(0, 0, 0, 0.0389404), 
-  0px 4.34355px 3.47484px rgba(0, 0, 0, 0.0482987), 
-  0px 1.71745px 1.37396px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.0217013),
+    0px 18.2508px 14.6007px rgba(0, 0, 0, 0.0310596),
+    0px 8.86044px 7.08835px rgba(0, 0, 0, 0.0389404),
+    0px 4.34355px 3.47484px rgba(0, 0, 0, 0.0482987),
+    0px 1.71745px 1.37396px rgba(0, 0, 0, 0.07);
 }
 .action-button p {
   filter: drop-shadow(0px 2px 2px rgb(0 0 0 / 0.1));
