@@ -177,6 +177,7 @@ import Compass from "./icons/Compass";
 import Union from "./icons/Union";
 import NotificationSuccess from "./icons/NotificationSuccess";
 import NotificationError from "./icons/NotificationError";
+import NotificationWarning from "./icons/NotificationWarning";
 
 export const icons = {
   Bin,
@@ -356,6 +357,7 @@ export const icons = {
   Union,
   NotificationSuccess,
   NotificationError,
+  NotificationWarning,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {

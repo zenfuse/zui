@@ -72,23 +72,8 @@
                 "test": false
             },
             {
-                "name": "Alert.js",
-                "relativePath": "src/components/create-notification/toasted-notes/Alert.js",
-                "test": false
-            },
-            {
                 "name": "Message.js",
                 "relativePath": "src/components/create-notification/toasted-notes/Message.js",
-                "test": false
-            },
-            {
-                "name": "Positions.js",
-                "relativePath": "src/components/create-notification/toasted-notes/Positions.js",
-                "test": false
-            },
-            {
-                "name": "Toast.js",
-                "relativePath": "src/components/create-notification/toasted-notes/Toast.js",
                 "test": false
             },
             {
@@ -97,14 +82,19 @@
                 "test": false
             },
             {
+                "relativePath": "src/components/create-notification/toasted-notes/Toaster.js",
+                "test": false,
+                "name": "Toaster.js"
+            },
+            {
                 "name": "index.js",
                 "relativePath": "src/components/create-notification/toasted-notes/index.js",
                 "test": false
             },
             {
-                "name": "useTimeout.js",
-                "relativePath": "src/components/create-notification/toasted-notes/useTimeout.js",
-                "test": false
+                "relativePath": "src/components/create-notification/toasted-notes/utils.js",
+                "test": false,
+                "name": "utils.js"
             }
         ],
         "mainFile": "src/components/create-notification/index.js",
@@ -943,6 +933,16 @@
                 "test": false
             },
             {
+                "relativePath": "src/components/ui/all-icons/icons/NotificationError.js",
+                "test": false,
+                "name": "NotificationError.js"
+            },
+            {
+                "relativePath": "src/components/ui/all-icons/icons/NotificationSuccess.js",
+                "test": false,
+                "name": "NotificationSuccess.js"
+            },
+            {
                 "name": "Okb.js",
                 "relativePath": "src/components/ui/all-icons/icons/Okb.js",
                 "test": false
@@ -1476,6 +1476,11 @@
                 "name": "index.js",
                 "relativePath": "src/components/ui/side-notification/index.js",
                 "test": false
+            },
+            {
+                "relativePath": "src/components/ui/side-notification/index.stories.js",
+                "test": false,
+                "name": "index.stories.js"
             }
         ],
         "mainFile": "src/components/ui/side-notification/index.js",

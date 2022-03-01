@@ -25,5 +25,5 @@ Default.args = {
   titleClasses: "text-green-450",
   message: "Hello! I am message",
   link: "/",
-  iconName: "NotificationSuccess",
+  iconName: "NotificationWarning",
 };
