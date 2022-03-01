@@ -89,6 +89,7 @@ export default class ToastManager extends React.Component {
 
   getStyle = (position) => ({
     maxWidth: "560px",
+
     position: "fixed",
     zIndex: 5500,
     pointerEvents: "none",

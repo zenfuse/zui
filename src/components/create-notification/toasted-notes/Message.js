@@ -58,6 +58,7 @@ export const Message = ({
           style={{
             opacity: props.opacity,
             height: props.height,
+            margin: "10px",
           }}
         >
           <animated.div
