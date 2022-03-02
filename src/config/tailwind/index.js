@@ -70,6 +70,10 @@ module.exports = {
           900: "#171717",
           950: "#101010",
         },
+        "lime": {
+          ...colors.lime,
+          
+        },
         red: {
           base: "#fc3d30",
           100: "#fff5f5",
@@ -242,6 +246,7 @@ module.exports = {
         "250px": "250px",
         "300px": "300px",
         "350px": "350px",
+        "360px": "360px",
         "400px": "400px",
         "450px": "450px",
         "500px": "500px",

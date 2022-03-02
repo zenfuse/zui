@@ -46,6 +46,9 @@ const Button = (props) => {
       case "confetti":
         className += confettiBaseClasses;
         break;
+      case "action": 
+        className += actionBaseClasses;
+        break;
     }
     className += props.className;
     return className;
@@ -194,4 +197,18 @@ const confettiBaseClasses = `
   @ani items-center
   @pn relative
   @wh w-full
+`;
+
+const actionBaseClasses = `
+  action-button
+  @pg px-9 py-3
+  border
+  @brr rounded-10px
+  @ftf font-family-rubik-medium
+  @ttc text-white
+  @fts text-18px
+  @leh leading-24px
+  cursor-pointer
+  transition
+  @tndn duration-200
 `;

@@ -1,24 +1,7 @@
-import * as React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useTransition, animated } from "react-spring";
 import ReachAlert from "@reach/alert";
-import Alert from "./Alert";
-import { useTimeout } from "./useTimeout";
-
-const getStyle = (position) => {
-  let style = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  };
-
-  if (position.includes("right")) {
-    style.alignItems = "flex-end";
-  } else if (position.includes("left")) {
-    style.alignItems = "flex-start";
-  }
-
-  return style;
-};
+import { useTimeout, createAnimationConfig } from "./utils";
 
 export const Message = ({
   id,
@@ -28,106 +11,67 @@ export const Message = ({
   requestClose = false,
   duration = 30000,
 }) => {
-  const container = React.useRef(null);
-  const [timeout, setTimeout] = React.useState(duration);
-  const [localShow, setLocalShow] = React.useState(true);
+  const container = useRef(null);
+  const [timeout, setTimeout] = useState(duration);
+  const [localShow, setLocalShow] = useState(true);
 
-  const isFromTop =
-    position === "top-left" || position === "top-right" || position === "top";
+  const onMouseEnter = () => setTimeout(null);
 
-  useTimeout(close, timeout);
+  const onMouseLeave = () => setTimeout(duration);
 
-  const animation = {
-    config: { mass: 1, tension: 185, friction: 26 },
-    from: {
-      opacity: 1,
-      height: 0,
-      transform: `translateY(${isFromTop ? "-100%" : 0}) scale(1)`,
-    },
-    enter: () => (next) =>
-      next({
-        opacity: 1,
-        height: container.current.getBoundingClientRect().height,
-        transform: `translateY(0) scale(1)`,
-      }),
-    leave: {
-      opacity: 0,
-      height: 0,
-      transform: `translateY(0 scale(0.9)`,
-    },
-    onRest,
-  };
-
-  const transition = useTransition(localShow, animation);
-  const style = React.useMemo(() => getStyle(position), [position]);
-
-  function onMouseEnter() {
-    setTimeout(null);
-  }
-
-  function onMouseLeave() {
-    setTimeout(duration);
-  }
-
-  function onRest() {
+  const onRest = () => {
     if (!localShow) {
       onRequestRemove();
     }
-  }
+  };
 
-  function close() {
+  function onClose() {
     setLocalShow(false);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (requestClose) {
       setLocalShow(false);
     }
   }, [requestClose]);
 
-  function renderMessage() {
-    if (typeof message === "string" || React.isValidElement(message)) {
-      return <Alert id={id} title={message} onClose={close} />;
-    }
+  const renderMessage = () => {
+    return message({
+      id,
+      onClose,
+    });
+  };
 
-    if (typeof message === "function") {
-      return message({
-        id,
-        onClose: close,
-      });
-    }
+  useTimeout(onClose, timeout);
 
-    return null;
-  }
+  const animation = createAnimationConfig(position, container, onRest);
 
-  return (
-    <React.Fragment>
-      {transition(
-        (props, item) =>
-          item && (
-            <animated.div
-              className="Toaster__message"
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-              style={{
-                opacity: props.opacity,
-                height: props.height,
-                ...style,
-              }}
-            >
-              <animated.div
-                style={{
-                  transform: props.transform,
-                  pointerEvents: "auto",
-                }}
-                ref={container}
-                className="Toaster__message-wrapper"
-              >
-                <ReachAlert>{renderMessage()}</ReachAlert>
-              </animated.div>
-            </animated.div>
-          )
-      )}
-    </React.Fragment>
+  const transition = useTransition(localShow, animation);
+
+  return transition(
+    (props, item) =>
+      item && (
+        <animated.div
+          className="Toaster__message"
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          style={{
+            opacity: props.opacity,
+            height: props.height,
+            margin: "10px",
+          }}
+        >
+          <animated.div
+            style={{
+              transform: props.transform,
+              pointerEvents: "auto",
+            }}
+            ref={container}
+            className="Toaster__message-wrapper"
+          >
+            <ReachAlert>{renderMessage()}</ReachAlert>
+          </animated.div>
+        </animated.div>
+      )
   );
 };

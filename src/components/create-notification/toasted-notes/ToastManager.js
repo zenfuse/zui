@@ -1,14 +1,6 @@
 import * as React from "react";
 import { Message } from "./Message";
-
-const defaultState = {
-  top: [],
-  "top-left": [],
-  "top-right": [],
-  "bottom-left": [],
-  bottom: [],
-  "bottom-right": [],
-};
+import { positionStyles, defaultState } from "./utils";
 
 export default class ToastManager extends React.Component {
   static idCounter = 0;
@@ -24,8 +16,8 @@ export default class ToastManager extends React.Component {
     const toast = this.createToastState(message, options);
     const { position } = toast;
 
-    // prepend the toast for toasts positioned at the top of
-    // the screen, otherwise append it.
+    // prepend the toast for toasts positioned at the top of the screen, otherwise append it.
+
     const isTop = position.includes("top");
 
     this.setState((prev) => {
@@ -41,10 +33,9 @@ export default class ToastManager extends React.Component {
 
   closeAll = () => {
     Object.keys(this.state).forEach((pos) => {
-      const p = pos;
-      const position = this.state[p];
+      const position = this.state[pos];
       position.forEach((toast) => {
-        this.closeToast(toast.id, p);
+        this.closeToast(toast.id, pos);
       });
     });
   };
@@ -52,8 +43,8 @@ export default class ToastManager extends React.Component {
   createToastState = (message, options) => {
     const id = ++ToastManager.idCounter;
 
-    // a bit messy, but object.position returns a number because
-    // it's a method argument.
+    // a bit messy, but object.position returns a number because it's a method argument.
+
     const position =
       options.hasOwnProperty("position") && typeof options.position === "string"
         ? options.position
@@ -96,52 +87,29 @@ export default class ToastManager extends React.Component {
     });
   };
 
-  getStyle = (position) => {
-    let style = {
-      maxWidth: "560px",
-      position: "fixed",
-      zIndex: 5500,
-      pointerEvents: "none",
-    };
+  getStyle = (position) => ({
+    maxWidth: "560px",
 
-    if (position === "top" || position === "bottom") {
-      style.margin = "0 auto";
-      style.textAlign = "center";
-    }
-
-    if (position.includes("top")) {
-      style.top = 0;
-    }
-
-    if (position.includes("bottom")) {
-      style.bottom = 0;
-    }
-
-    if (!position.includes("left")) {
-      style.right = 0;
-    }
-
-    if (!position.includes("right")) {
-      style.left = 0;
-    }
-
-    return style;
-  };
+    position: "fixed",
+    zIndex: 5500,
+    pointerEvents: "none",
+    ...positionStyles[position],
+  });
 
   render() {
     return Object.keys(this.state).map((position) => {
-      const pos = position;
-      const toasts = this.state[pos];
+      const toasts = this.state[position];
+
       return (
-        <span
+        <div
           key={position}
-          className={"Toaster__manager-" + pos}
-          style={this.getStyle(pos)}
+          className={"Toaster__manager-" + position}
+          style={this.getStyle(position)}
         >
-          {toasts.map((toast) => {
-            return <Message position={pos} key={toast.id} {...toast} />;
-          })}
-        </span>
+          {toasts.map((toast) => (
+            <Message position={position} key={toast.id} {...toast} />
+          ))}
+        </div>
       );
     });
   }

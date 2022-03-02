@@ -1,18 +1,46 @@
 import React from "react";
-import AllIcons from "../all-icons"
+import AllIcons from "../all-icons";
+import Link from "next/link";
 
-const SideNotificationLayout = ({ title, onClose }) => (
-  <div className="w-auto z-50 mr-2 mb-2">
-    <div className="w-auto shadow-trigger dark:shadow-dark-shadow-200 border border-gray-light dark:border-true-gray-750 rounded-8px flex overflow-hidden bg-white dark:bg-true-gray-800 relative">
-      <div className="w-10/12 px-3 py-4">
-        <div className="text-12px font-family-inter text-gray-blue dark:text-white @wdb break-words">
+const SideNotificationLayout = ({
+  title,
+  titleClasses = "",
+  message,
+  iconName,
+  iconClassName = "w-5 h-5",
+  link,
+  linkTitle = "See more",
+  onClose,
+}) => (
+  <div
+    style={{ backdropFilter: "blur(20px)" }}
+    className="w-auto md:w-360px z-50 m-1 shadow-lg rounded-10px px-4 py-2 flex flex-col gap-1 border bg-white bg-opacity-70 dark:bg-true-gray-750"
+    onClick={onClose}
+  >
+    <div className="flex flex-row items-center gap-3">
+      {iconName ? <AllIcons name={iconName} className={iconClassName} /> : null}
+      {title ? (
+        <p
+          className={`font-family-inter-semi-bold text-12px leading-18px ${
+            titleClasses || "text-black dark:text-white"
+          }`}
+        >
           {title}
-        </div>
-      </div>
-      <button onClick={onClose} className="absolute top-2 right-2">
-        <AllIcons name="Close" className="w-4 text-gray-dark dark:text-white" />
-      </button>
+        </p>
+      ) : null}
+      {link ? (
+        <Link href={link} passHref>
+          <a className="font-family-inter-medium text-10px leading-14px text-blue-primary dark:text-blue-650 ml-auto hover:opacity-70 duration-200">
+            {linkTitle}
+          </a>
+        </Link>
+      ) : null}
     </div>
+    {message ? (
+      <p className="font-family-inter-medium text-10px leading-14px text-true-gray-450">
+        {message}
+      </p>
+    ) : null}
   </div>
 );
 

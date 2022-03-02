@@ -109,5 +109,9 @@ Default.args = {
         // },
       ],
     },
+    {
+      variant: "action",
+      title: "Learn more"
+    },
   ],
 };

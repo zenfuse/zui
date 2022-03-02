@@ -99,6 +99,7 @@ import Calendar from "./icons/Calendar";
 import CurvedLine from "./icons/CurvedLine";
 import Dominance from "./icons/Dominance";
 import Coin from "./icons/Coin";
+import CoinConvex from "./icons/CoinConvex";
 import Hourly from "./icons/Hourly";
 import Daily from "./icons/Daily";
 import SquareArrow from "./icons/SquareArrow";
@@ -174,6 +175,9 @@ import Order from "./icons/Order";
 import EditOutline from "./icons/EditOutline";
 import Compass from "./icons/Compass";
 import Union from "./icons/Union";
+import NotificationSuccess from "./icons/NotificationSuccess";
+import NotificationError from "./icons/NotificationError";
+import NotificationWarning from "./icons/NotificationWarning";
 
 export const icons = {
   Bin,
@@ -181,6 +185,7 @@ export const icons = {
   BoldArrow,
   Ethereum,
   MetaMask,
+  CoinConvex,
   Success,
   Failure,
   Exclamation,
@@ -350,6 +355,9 @@ export const icons = {
   EditOutline,
   Compass,
   Union,
+  NotificationSuccess,
+  NotificationError,
+  NotificationWarning,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
