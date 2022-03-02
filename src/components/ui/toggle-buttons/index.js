@@ -86,7 +86,7 @@ export default ToggleButtons;
 
 const containerClasses = "bg-true-gray-100 dark:bg-true-gray-900 rounded-8px";
 const buttonClasses = `
-  flex flex-shrink-0 justify-center items-center h-8 rounded-8px focus:outline-none
+  flex shrink-0 justify-center items-center h-8 rounded-8px focus:outline-none
   @brw border-px 
 `;
 const defaultButtonClasses =

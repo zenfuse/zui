@@ -13,7 +13,7 @@ const Badge = ({ text, image, containerClassName }) => {
       {image && (
         <div
           className={
-            "@pn absolute right-0 top-0 w-7 h-7 ring-gray-200 rounded-full ring-1 bg-white text-lg flex items-center justify-center transform -translate-y-1/2 translate-x-1/2"
+            "@pn absolute right-0 top-0 w-7 h-7 ring-gray-200 rounded-full ring-1 bg-white text-lg flex items-center justify-center -translate-y-1/2 translate-x-1/2"
           }
         >
           <img className="w-5" src={image} />

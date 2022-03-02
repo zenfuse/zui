@@ -1,13 +1,10 @@
 import React from "react";
-import { withNextRouter } from "storybook-addon-next-router";
-
 import ZenfuseUi from "./index";
 
 export default {
   component: ZenfuseUi,
   title: "Components/ZenfuseUi",
   decorators: [
-    withNextRouter,
     (story) => (
       <div className="w-full mx-auto container flex items-center justify-center mt-40">
         {story()}

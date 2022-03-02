@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import Input from "./index";
-import { withNextRouter } from "storybook-addon-next-router";
 import SmartButton from "../smart-button";
 import AllIcons from "../ui/all-icons";
 
@@ -8,7 +7,6 @@ export default {
   component: Input,
   title: "Forms/Input",
   decorators: [
-    withNextRouter,
     (story) => <div className="w-64 mx-auto mt-40 dark">{story()}</div>,
   ],
 };

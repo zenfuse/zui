@@ -13,7 +13,7 @@ const MultiIconsButton = ({ linkProps }) => {
           <Link href={item.value} key={index} passHref>
             <a target="_blank" className="col-span-1">
               <AllIcons
-                className="w-6 h-6 transform duration-200 hover:scale-110"
+                className="w-6 h-6 duration-200 hover:scale-110"
                 name={item.name}
               />
             </a>

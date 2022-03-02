@@ -1,13 +1,11 @@
 import React, { useRef } from "react";
 import SmartButton from "./index";
-import { withNextRouter } from "storybook-addon-next-router";
 import useDetectOutsideClick from "../../functions/hooks/use-detect-outsideclick";
 
 export default {
   component: SmartButton,
   title: "Buttons/SmartButton",
   decorators: [
-    withNextRouter,
     (story) => <div className="w-fit mx-auto mt-40">{story()}</div>,
   ],
 };
@@ -56,7 +54,7 @@ Default.args = {
   dropdownContainerClasses: "@it left-1 top-full",
   tooltipItems: TooltipItems,
   tooltipContainerClasses:
-    "@it left-0 bottom-full @mn mb-4 transform origin-left",
+    "@it left-0 bottom-full @mn mb-4 origin-left",
   onClick: (e) => console.log(e),
 };
 

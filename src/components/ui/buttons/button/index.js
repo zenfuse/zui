@@ -175,7 +175,6 @@ const blurPrimaryBaseClasses = `
   @ttc text-white
   @pg py-5 px-9
   @bdo sm:hover:scale-105
-  transform
   blur-button
 `;
 

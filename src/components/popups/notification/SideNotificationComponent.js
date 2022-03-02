@@ -34,7 +34,7 @@ const SideNotificationComponent = ({ title, show }) => {
         leave="opacity-0"
       >
         <div
-          className={`fixed z-50 bottom-3 right-3 transform transition duration-750`}
+          className={`fixed z-50 bottom-3 right-3 transition duration-750`}
         >
           <div className="w-auto shadow-trigger border border-gray-light rounded-8px flex overflow-hidden bg-white relative">
             {/* <div className="w-2/12 bg-green-base bg-opacity-10 flex items-center justify-center px-3 py-4">
