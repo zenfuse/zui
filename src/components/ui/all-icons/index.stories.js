@@ -26,6 +26,6 @@ const Template = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  className: "w-10 text-black",
+  className: "w-10 h-10 text-black",
   imageClassName: "",
 };
