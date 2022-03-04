@@ -135,13 +135,14 @@ const iconBaseClassName = `
 
 const unlockedClassName = `
   @pn relative
-  hover:border-blue-primary focus:border-blue-primary 
+
   @bxsw hover:shadow-blue-outline focus:shadow-blue-outline
   @ttc text-black dark:text-white
 `;
 
 const baseBlockedClassName = `
   @cr cursor-not-allowed
+  @pre pointer-events-none
   @pn relative
   @ttc text-gray-primary
   @bdc bg-pearl
@@ -155,7 +156,7 @@ const baseClassName = `
   @leh leading-20px
   @brw border-px
   @brs border-solid
-  @brc border-gray-light dark:border-true-gray-700
+  @brc border-gray-light dark:border-true-gray-700 hover:border-blue-primary focus:border-blue-primary 
   @tndn duration-200
   @oe outline-none focus:outline-none hover:outline-none
   @brr rounded-8px
