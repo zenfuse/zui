@@ -8,7 +8,7 @@ export default {
   title: "Forms/Input",
   decorators: [
     (story) => (
-      <div className="w-screen h-screen mx-auto container flex items-center justify-center">
+      <div className="w-screen h-screen mx-auto container flex items-center justify-center bg-black dark">
         <div className="w-64 mx-auto">{story()}</div>
       </div>
     ),
