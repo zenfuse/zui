@@ -120,6 +120,66 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "nightcoder.zui/src/components/fixed-links-bar/desktop-exchanges-bar@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/fixed-links-bar/desktop-exchanges-bar/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/fixed-links-bar/desktop-exchanges-bar/index.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "nightcoder.zui/src/components/fixed-links-bar/exchange-item@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/fixed-links-bar/exchange-item/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/fixed-links-bar/exchange-item/index.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "nightcoder.zui/src/components/fixed-links-bar/modal-arrow@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/fixed-links-bar/modal-arrow/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/fixed-links-bar/modal-arrow/index.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "nightcoder.zui/src/components/fixed-links-bar/pair-link@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/fixed-links-bar/pair-link/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/fixed-links-bar/pair-link/index.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "nightcoder.zui/src/components/fixed-links-bar@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/fixed-links-bar/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/fixed-links-bar/index.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "nightcoder.zui/src/components/footer@0.0.63": {
         "files": [
             {
