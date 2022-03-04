@@ -6,7 +6,7 @@ export default {
   title: "Forms/TextArea",
   decorators: [
     (story) => (
-      <div className="w-screen h-screen mx-auto container flex items-center justify-center dark">
+      <div className="w-screen h-screen mx-auto container flex items-center justify-center">
         <div className="w-64 mx-auto">{story()}</div>
       </div>
     ),

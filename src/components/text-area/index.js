@@ -43,15 +43,13 @@ const baseClasses = `
     @ttc text-black dark:text-white
     @brw border-px
     @brs border-solid
-    @brc border-gray-light dark:border-true-gray-700
+    @brc border-gray-light dark:border-true-gray-700 hover:border-blue-primary focus:border-blue-primary
     @tndn duration-200
     @oe outline-none focus:outline-none hover:outline-none
     @brr rounded-8px
-    @bro hover:border-opacity-70
     @dy flex
     @pg p-3
     @pn relative
-    @brc hover:border-blue-primary focus:border-blue-primary
     @bxsw hover:shadow-blue-outline focus:shadow-blue-outline
- 
+    @bro hover:border-opacity-70
 `;

@@ -135,7 +135,7 @@ const iconBaseClassName = `
 
 const unlockedClassName = `
   @pn relative
-  @brc hover:border-blue-primary focus:border-blue-primary
+  hover:border-blue-primary focus:border-blue-primary 
   @bxsw hover:shadow-blue-outline focus:shadow-blue-outline
   @ttc text-black dark:text-white
 `;
