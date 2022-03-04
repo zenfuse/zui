@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Input from "./index";
 import SmartButton from "../smart-button";
 import AllIcons from "../ui/all-icons";
@@ -7,7 +7,11 @@ export default {
   component: Input,
   title: "Forms/Input",
   decorators: [
-    (story) => <div className="w-64 mx-auto mt-40 dark">{story()}</div>,
+    (story) => (
+      <div className="w-screen h-screen mx-auto container flex items-center justify-center dark">
+        <div className="w-64 mx-auto">{story()}</div>
+      </div>
+    ),
   ],
 };
 

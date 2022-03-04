@@ -148,17 +148,18 @@ const baseBlockedClassName = `
 `;
 
 const baseClassName = `
-  @bdc bg-white dark:bg-true-gray-850
+  @wh w-full
+  @bdc bg-white dark:bg-true-gray-750
   @ftf font-family-inter
-  @brc border-gray-light dark:border-true-gray-700
+  @fts text-14px
+  @leh leading-20px
   @brw border-px
   @brs border-solid
+  @brc border-gray-light dark:border-true-gray-700
   @tndn duration-200
   @oe outline-none focus:outline-none hover:outline-none
   @brr rounded-8px
   @bro hover:border-opacity-70
-  @wh w-full
-  @fts text-14px
   @fx flex
   @pg p-3
 `;

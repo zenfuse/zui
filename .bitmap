@@ -213,7 +213,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/input@0.0.105": {
+    "nightcoder.zui/src/components/input@0.0.106": {
         "files": [
             {
                 "name": "index.js",
@@ -394,6 +394,18 @@
         ],
         "mainFile": "src/components/tabs-array/index.js",
         "trackDir": "src/components/tabs-array",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "nightcoder.zui/src/components/text-area@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/text-area/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/text-area/index.js",
         "origin": "AUTHORED",
         "exported": true
     },
@@ -1468,7 +1480,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/form-input@0.0.95": {
+    "nightcoder.zui/src/components/ui/form-input@0.0.96": {
         "files": [
             {
                 "name": "index.js",
