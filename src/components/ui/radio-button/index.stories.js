@@ -11,12 +11,14 @@ export default {
 const Template = (args) => {
   const [active, setActive] = useState(args.active);
   return (
-    <div className="w-8">
-      <RadioButton
-        {...args}
-        active={active}
-        onClick={() => setActive(!active)}
-      />
+    <div className="w-screen h-screen bg-black  dark flex items-center justify-center">
+      <div className="w-8">
+        <RadioButton
+          {...args}
+          active={active}
+          onClick={() => setActive(!active)}
+        />
+      </div>
     </div>
   );
 };
