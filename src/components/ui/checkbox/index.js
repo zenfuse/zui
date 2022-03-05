@@ -1,12 +1,11 @@
 import React from "react";
-
 import AllIcons from "../all-icons";
 import useStyleRewriter from "../../../functions/hooks/use-style-rewriter";
 
 const Checkbox = ({
   active,
   icon = "Check",
-  onChange = () => console.log("Checkbox -> onChange"),
+  onChange,
   className = "",
   id = null,
   activeClassName = "",
@@ -15,19 +14,13 @@ const Checkbox = ({
   const activeSrClasses = useStyleRewriter(baseActiveClasses, activeClassName);
 
   return (
-    <>
-      <label
-        htmlFor={id}
-        className={`${srClasses} ${active ? activeSrClasses : null}`}
-      >
-        <div className="w-full pb-full relative">
-          <div className="absolute flex items-center justify-center inset-0">
-            {active ? (
-              <AllIcons name={icon} className="@wh w-2/3 @ttc text-white" />
-            ) : null}
-          </div>
-        </div>
-      </label>
+    <label
+      htmlFor={id}
+      className={`${srClasses} ${active ? activeSrClasses : ""}`}
+    >
+      {active ? (
+        <AllIcons name={icon} className="w-2/3 @ttc text-white" />
+      ) : null}
       <input
         type="checkbox"
         id={id}
@@ -35,7 +28,7 @@ const Checkbox = ({
         onChange={onChange}
         checked={active}
       />
-    </>
+    </label>
   );
 };
 
@@ -49,7 +42,13 @@ const baseClasses = `
   @bxsw shadow-sm hover:shadow-blue-outline
   @brc border-gray-light hover:border-blue-base dark:hover:border-blue-600
   @tndn duration-200
-  @cr cursor-pointer`;
+  @cr cursor-pointer
+  @wh w-5
+  @ht h-5
+  @dy flex
+  @ani items-center
+  @jyc justify-center
+`;
 
 const baseActiveClasses = `
   @brc border-blue-base
