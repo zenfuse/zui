@@ -13,6 +13,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "nightcoder.zui/src/components/accept-cookies-message@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/accept-cookies-message/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/accept-cookies-message/index.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "nightcoder.zui/src/components/buttons-array@0.0.79": {
         "files": [
             {
@@ -213,7 +225,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/input@0.0.111": {
+    "nightcoder.zui/src/components/input@0.0.112": {
         "files": [
             {
                 "name": "index.js",
@@ -1480,7 +1492,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/form-input@0.0.101": {
+    "nightcoder.zui/src/components/ui/form-input@0.0.102": {
         "files": [
             {
                 "name": "index.js",
