@@ -1,6 +1,6 @@
 import React from "react";
 
-const TikTok = ({ className }) => (
+const Tiktok = ({ className }) => (
   <svg
     viewBox="0 0 18 20"
     fill="none"
@@ -11,4 +11,4 @@ const TikTok = ({ className }) => (
   </svg>
 );
 
-export default TikTok;
+export default Tiktok;

@@ -159,7 +159,7 @@ import Pencil from "./icons/Pencil";
 import Wallet from "./icons/Wallet";
 import ProfileInCircle from "./icons/ProfileInCircle";
 import FilledCheck from "./icons/FilledCheck";
-import TikTok from "./icons/TikTok";
+import Tiktok from "./icons/Tiktok";
 import Smile from "./icons/Smile";
 import SimpleArrow from "./icons/SimpleArrow";
 import Like from "./icons/Like";
@@ -339,7 +339,7 @@ export const icons = {
   Wallet,
   ProfileInCircle,
   FilledCheck,
-  TikTok,
+  Tiktok,
   Smile,
   SimpleArrow,
   Like,
