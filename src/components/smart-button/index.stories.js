@@ -1,21 +1,14 @@
 import React, { useRef } from "react";
 import SmartButton from "./index";
-import useDetectOutsideClick from "../../functions/hooks/use-detect-outsideclick";
 
 export default {
   component: SmartButton,
   title: "Buttons/SmartButton",
-  decorators: [
-    (story) => <div className="w-fit mx-auto mt-40">{story()}</div>,
-  ],
+  decorators: [(story) => <div className="w-fit mx-auto mt-40">{story()}</div>],
 };
 
 const DropdownItems = ({ setIsDropdownOpen }) => {
-  // console.log("setIsDropdownOpen", setIsDropdownOpen);
   const dd = useRef(null);
-  // const [isActive] = useDetectOutsideClick(dd, true);
-
-  // console.log("useDetectOutsideClick isActive", isActive);
 
   return (
     <div ref={dd} className="w-full text-black py-1 cursor-default">
@@ -25,11 +18,12 @@ const DropdownItems = ({ setIsDropdownOpen }) => {
       <SmartButton variant="primary" className="@mn mx-1 mb-1">
         <span>Button</span>
       </SmartButton>
-      <SmartButton variant="primary" className="@mn mx-1 mb-1">
-        <span>Button</span>
-      </SmartButton>
-      <SmartButton variant="primary" className="@mn mx-1">
-        <span>Button</span>
+      <SmartButton
+        onClick={() => setIsDropdownOpen(false)}
+        variant="transparentOutline"
+        className="@mn mx-1 "
+      >
+        <span>Close</span>
       </SmartButton>
     </div>
   );
@@ -53,8 +47,7 @@ Default.args = {
   tooltipPosition: "left-bottom",
   dropdownContainerClasses: "@it left-1 top-full",
   tooltipItems: TooltipItems,
-  tooltipContainerClasses:
-    "@it left-0 bottom-full @mn mb-4 origin-left",
+  tooltipContainerClasses: "@it left-0 bottom-full @mn mb-4 origin-left",
   onClick: (e) => console.log(e),
 };
 

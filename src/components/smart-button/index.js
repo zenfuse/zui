@@ -4,8 +4,8 @@ import useDetectOutsideClick from "../../functions/hooks/use-detect-outsideclick
 import useDetectMouseover from "../../functions/hooks/use-detect-mouseover";
 import useStyleRewriter from "../../functions/hooks/use-style-rewriter";
 import { Transition } from "transition-component";
-import DropdownContainer from "../../components/ui/dropdown-container";
-import Tooltip from "../../components/ui/tooltip";
+import DropdownContainer from "../ui/dropdown-container";
+import Tooltip from "../ui/tooltip";
 import * as R from "ramda";
 
 const SmartButton = ({
@@ -15,25 +15,29 @@ const SmartButton = ({
   variant,
   tooltipPosition,
   href = "",
-  dropdownItems,
+  dropdownItems: DropdownItems,
   dropdownContainerClasses = "",
   dropdownProps,
-  tooltipItems,
+  tooltipItems: TooltipItems,
   tooltipContainerClasses = "",
-  onClick,
+  onClick: onClickCb,
   linkProps = [],
 }) => {
   const dropdownRef = useRef(null);
   const SmartButtonRef = useRef(null);
 
-  const DropdownItems = useMemo(() => dropdownItems, [dropdownItems]);
-  const TooltipItems = useMemo(() => tooltipItems, [tooltipItems]);
-
   const [isDropdownOpen, setIsDropdownOpen] = useDetectOutsideClick(
-    dropdownRef,
-    false,
-    SmartButtonRef
+    SmartButtonRef,
+    false
   );
+
+  const onClick = (e) => {
+    if (DropdownItems && !dropdownRef.current?.contains(e.target)) {
+      setIsDropdownOpen(!isDropdownOpen);
+    }
+
+    return onClickCb && onClickCb(e);
+  };
 
   const [isMouseOver] = useDetectMouseover(SmartButtonRef, false);
 
@@ -44,30 +48,11 @@ const SmartButton = ({
     `${disabled ? disabledClasses : ""} ${className} `
   );
 
-  // const onClickFunc = useCallback(
-  //   (e) => {
-  //     if (onClick) {
-  //       return onClick(e, { dropdown: { isDropdownOpen, setIsDropdownOpen } });
-  //     }
-  //   },
-  //   [isDropdownOpen]
-  // );
+  const Element = href ? LinkSmartButton : DivSmartButton;
 
-  const Element = useMemo(() => {
-    if (href) {
-      return LinkSmartButton;
-    } else {
-      return DivSmartButton;
-    }
-  }, [SmartButtonRef, srClasses, children]);
-
-  const elementProps = useMemo(() => {
-    if (href) {
-      return { href, passHref: true, className: srClasses, linkProps };
-    } else {
-      return { className: srClasses };
-    }
-  }, [baseClasses, href, srClasses, disabled, linkProps]);
+  const elementProps = href
+    ? { href, passHref: true, className: srClasses, linkProps }
+    : { className: srClasses };
 
   return (
     <>
@@ -76,9 +61,7 @@ const SmartButton = ({
         onClick={onClick}
         {...elementProps}
       >
-        {typeof children === "function"
-          ? children({ isMouseOver, isDropdownOpen })
-          : children}
+        {typeof children === "function" ? children({ isMouseOver }) : children}
 
         {DropdownItems && (
           <Transition show={isDropdownOpen} {...contentTransitionProps}>
@@ -114,13 +97,14 @@ const baseClasses =
   "@pn relative @ftf font-family-rubik @oe focus:outline-none @cr cursor-pointer @tndn duration-200 @tta text-center";
 
 const disabledClasses =
-  "@pre pointer-events-none @oy opacity-60 @bdc bg-true-gray-100 dark:bg-true-gray-700 @ttc text-true-gray-450";
+  "@pre pointer-events-none @oy opacity-60 @bdc bg-true-gray-100 @ttc text-true-gray-450";
 
 const useVariant = (defaultClasses, variant) => {
-  return useMemo(() => {
-    switch (variant) {
-      case "primary":
-        return `${baseClasses} 
+  return variants[variant] || defaultClasses;
+};
+
+const variants = {
+  primary: `${baseClasses} 
           @bdc bg-blue-primary dark:bg-blue-600
           @bdo hover:bg-opacity-60 dark:hover:bg-opacity-80
           @dy flex 
@@ -129,9 +113,8 @@ const useVariant = (defaultClasses, variant) => {
           @pg px-8 py-3 
           @brr rounded-8px 
           @fts text-15px 
-          @ttc text-white`;
-      case "white":
-        return `${baseClasses} 
+          @ttc text-white`,
+  white: `${baseClasses} 
           @tnp transition 
           @tntf ease-in-out 
           @bdc bg-white hover:bg-gray-blue 
@@ -141,9 +124,8 @@ const useVariant = (defaultClasses, variant) => {
           @pg px-8 py-3 
           @brr rounded-8px 
           @fts text-15px 
-          @ttc text-blue-base hover:text-white`;
-      case "danger":
-        return `${baseClasses} 
+          @ttc text-blue-base hover:text-white`,
+  danger: `${baseClasses} 
           @bdc bg-red-base 
           @bdo hover:bg-opacity-60 
           @dy flex 
@@ -152,26 +134,22 @@ const useVariant = (defaultClasses, variant) => {
           @pg px-8 py-3 
           @brr rounded-8px 
           @fts text-15px 
-          @ttc text-white`;
-      case "light":
-        return `${baseClasses} 
+          @ttc text-white`,
+  light: `${baseClasses} 
           @bdc bg-white hover:bg-gray-accent 
           @ttc text-black hover:text-blue-primary 
           @pg px-4 py-2 
           @brr rounded-16px 
-          @tta text-left`;
-      case "light-blue":
-        return `${baseClasses} 
+          @tta text-left`,
+  "light-blue": `${baseClasses} 
           @bdc bg-blue-light 
           @bdc hover:bg-blue-primary 
           @ttc text-blue-primary hover:text-white 
           @pg px-8 py-3 
           @brr rounded-16px 
-          @tta text-left`;
-      case "text":
-        return `${baseClasses}`;
-      case "circleLight":
-        return `${baseClasses} 
+          @tta text-left`,
+  text: baseClasses,
+  circleLight: `${baseClasses} 
           @brc border-gray-light hover:border-blue-primary 
           @brw border-px 
           @dy flex 
@@ -184,9 +162,8 @@ const useVariant = (defaultClasses, variant) => {
           @ttc hover:text-white 
           @brr rounded-full 
           @wh w-8
-          @zi z-45`;
-      case "circlePrimary":
-        return `${baseClasses} 
+          @zi z-45`,
+  circlePrimary: `${baseClasses} 
           @bdc bg-blue-primary 
           @brc border-blue-primary 
           @brw border-px 
@@ -197,9 +174,8 @@ const useVariant = (defaultClasses, variant) => {
           @pn relative 
           @brr rounded-full 
           @wh w-8 
-          @ttc text-white`;
-      case "transparentOutline":
-        return `${baseClasses}
+          @ttc text-white`,
+  transparentOutline: `${baseClasses}
           @dy flex flex-row
           @ani items-center
           @ttc text-blue-650
@@ -208,19 +184,14 @@ const useVariant = (defaultClasses, variant) => {
           @brr rounded-8px 
           @brw border
           @brc border-blue-650
-          @pg px-8 py-3`;
-      default:
-        return defaultClasses;
-    }
-  }, [defaultClasses, variant]);
+          @pg px-8 py-3`,
 };
-const DivSmartButton = ({ children, SmartButtonRef, ...props }) => {
-  return (
-    <div ref={SmartButtonRef} {...props}>
-      {children}
-    </div>
-  );
-};
+const DivSmartButton = ({ children, SmartButtonRef, ...props }) => (
+  <div ref={SmartButtonRef} {...props}>
+    {children}
+  </div>
+);
+
 const LinkSmartButton = ({ children, className, linkProps, ...props }) => {
   let linkAttributes = [];
   if (!R.isEmpty(linkProps) && linkProps) {

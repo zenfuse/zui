@@ -70,13 +70,25 @@ const SearchComponent = (props) => {
   );
 };
 
-const DropdownItems = () => {
+const DropdownItems = ({ setIsDropdownOpen }) => {
   return (
-    <div className="w-full text-black py-4">
+    <div className="w-full text-black py-1">
       <ul>
-        <li className="flex px-5 py-1 hover:text-blue-base">Dropdown Item</li>
-        <li className="flex px-5 py-1 hover:text-blue-base">Dropdown Item</li>
-        <li className="flex px-5 py-1 hover:text-blue-base">Dropdown Item</li>
+        <li className="flex justify-center px-5 py-1 hover:text-blue-base">
+          Dropdown Item
+        </li>
+        <li className="flex justify-center px-5 py-1 hover:text-blue-base">
+          Dropdown Item
+        </li>
+        <li className="flex justify-center px-5 py-1 hover:text-blue-base">
+          Dropdown Item
+        </li>
+        <li
+          onClick={() => setIsDropdownOpen(false)}
+          className="flex justify-center cursor-pointer px-5 py-1 hover:text-blue-base"
+        >
+          Close
+        </li>
       </ul>
     </div>
   );
@@ -103,6 +115,7 @@ Default.args = {
   iconClassName: "@it left-2 top-0",
   className: "@pg p-1 pl-10",
   dropdownItems: DropdownItems,
+  dropdownContainerClasses: "",
 };
 
 export const WithAllIcons = Template.bind({});
@@ -117,6 +130,7 @@ WithAllIcons.args = {
   className: "@pg p-3 pl-6",
   dropdownItems: DropdownItems,
   dropdownPosition: "right",
+  dropdownContainerClasses: "",
 };
 
 export const WithButton = Template.bind({});
@@ -128,6 +142,7 @@ WithButton.args = {
   className: "@oe outline-none focus:outline-none hover:outline-none",
   blocked: 0,
   children: <Button variant="transparentOutline" className="@ht h-full" />,
+  dropdownContainerClasses: "",
 };
 
 export const Blocked = Template.bind({});
@@ -138,6 +153,7 @@ Blocked.args = {
   type: "text",
   blocked: 1,
   children: <Button />,
+  dropdownContainerClasses: "",
 };
 
 const SearchTemplate = (args) => <SearchComponent {...args} />;
@@ -149,4 +165,5 @@ SearchInput.args = {
   placeholder: "Search...",
   type: "text",
   className: "@pg py-0 px-3 pr-7 @ht h-8 @fts text-xs",
+  dropdownContainerClasses: "",
 };

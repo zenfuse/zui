@@ -159,7 +159,7 @@ import Pencil from "./icons/Pencil";
 import Wallet from "./icons/Wallet";
 import ProfileInCircle from "./icons/ProfileInCircle";
 import FilledCheck from "./icons/FilledCheck";
-import Tiktok from "./icons/Tiktok";
+import Tiktok from "./icons/TikTok";
 import Smile from "./icons/Smile";
 import SimpleArrow from "./icons/SimpleArrow";
 import Like from "./icons/Like";

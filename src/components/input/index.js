@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useCallback, forwardRef } from "react";
+import React, { useRef, forwardRef } from "react";
 import DropdownContainer from "../ui/dropdown-container";
 import useDetectOutsideClick from "../../functions/hooks/use-detect-outsideclick";
 import AllIcons from "../ui/all-icons";
@@ -8,7 +8,7 @@ const Input = forwardRef(
   (
     {
       children,
-      dropdownItems,
+      dropdownItems: DropdownItems,
       value = "",
       type = "text",
       placeholder,
@@ -18,6 +18,7 @@ const Input = forwardRef(
       Icon,
       className = "",
       iconClassName = "",
+      dropdownContainerClasses = "",
       autoComplete = null,
       id = null,
       dropdownPosition = "left",
@@ -25,19 +26,16 @@ const Input = forwardRef(
     ref
   ) => {
     const dropdownRef = useRef(null);
-    const DropdownItems = useMemo(() => dropdownItems, [dropdownItems]);
+    const inputContainerRef = useRef(null);
 
     const [isDropdownOpen, setIsDropdownOpen] = useDetectOutsideClick(
-      dropdownRef,
+      inputContainerRef,
       false
     );
 
-    const onClick = useCallback(
-      (e) => {
-        setIsDropdownOpen(e);
-      },
-      [isDropdownOpen]
-    );
+    const onClick = (e) => {
+      setIsDropdownOpen(!isDropdownOpen);
+    };
 
     const iconSrClassName = useStyleRewriter(
       iconBaseClassName,
@@ -45,39 +43,34 @@ const Input = forwardRef(
       false
     );
 
-    const typeClasses = useMemo(() => {
-      if (type === "select") {
-        return "@cr cursor-pointer";
-      } else if (type === "text") {
-        return "@cr cursor-text";
-      }
-    }, [type]);
+    const typeClasses = classesByType[type];
 
     const baseClasses = useStyleRewriter(baseClassName, typeClasses, false);
 
-    const getBlockedClasses = useCallback(() => {
-      if (blocked) {
-        return getClassName(baseClasses, baseBlockedClassName, false);
-      } else {
-        return getClassName(baseClasses, unlockedClassName, false);
-      }
-    }, [blocked, baseClasses]);
+    const blockedClasses = blocked
+      ? getClassName(baseClasses, baseBlockedClassName, false)
+      : getClassName(baseClasses, unlockedClassName, false);
 
-    const blockedClasses = getBlockedClasses(baseClassName, baseClasses, false);
+    const srClasses = useStyleRewriter(blockedClasses, className);
 
-    const srClasses = useCallback(
-      () => getClassName(blockedClasses, className),
-      [className, blockedClasses]
+    const baseDropdownContainerClasses = `@wh w-full @mn mt-1 @ht h-200px @ow overflow-y-scroll ${
+      dropdownPosition === "right" ? "@it left-auto right-0" : "@it inset-x-0"
+    }`;
+
+    const srDropdownContainerClasses = useStyleRewriter(
+      baseDropdownContainerClasses,
+      dropdownContainerClasses,
+      true
     );
 
     return (
-      <div className="w-full relative">
+      <div ref={inputContainerRef} className="w-full relative">
         <input
           placeholder={placeholder}
           autoComplete={autoComplete}
           id={id}
           type={type == "select" ? "button" : type}
-          className={srClasses()}
+          className={srClasses}
           disabled={blocked ? true : false}
           onChange={onChange}
           onClick={onClick}
@@ -108,14 +101,10 @@ const Input = forwardRef(
             }`}
           >
             <DropdownContainer
-              className={`w-full mt-1 h-200px overflow-y-scroll ${
-                dropdownPosition === "right"
-                  ? "@it left-auto right-0"
-                  : " inset-x-0"
-              }`}
+              className={srDropdownContainerClasses}
               dropdownRef={dropdownRef}
             >
-              <DropdownItems />
+              <DropdownItems setIsDropdownOpen={setIsDropdownOpen} />
             </DropdownContainer>
           </div>
         ) : null}
@@ -126,6 +115,11 @@ const Input = forwardRef(
 
 export default Input;
 
+const classesByType = {
+  select: `@cr cursor-pointer`,
+  text: `@cr cursor-text`,
+};
+
 const iconBaseClassName = `
   @pn absolute
   @ht h-12
@@ -135,7 +129,6 @@ const iconBaseClassName = `
 
 const unlockedClassName = `
   @pn relative
-
   @bxsw hover:shadow-blue-outline focus:shadow-blue-outline
   @ttc text-black dark:text-white
 `;
