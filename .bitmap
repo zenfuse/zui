@@ -43,7 +43,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/charts/line-chart@0.0.6": {
+    "nightcoder.zui/src/components/charts/line-chart@0.0.7": {
         "files": [
             {
                 "relativePath": "src/components/charts/line-chart/index.js",

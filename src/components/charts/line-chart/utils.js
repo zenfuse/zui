@@ -84,16 +84,21 @@ const getOptions = (params) => {
         },
       },
     },
-    tooltip: {
-      enabled: false,
-      mode: null,
-      boxWidth: 0,
-      boxHeight: 0,
-    },
     responsive: true,
     maintainAspectRatio: false,
     showLines: true,
     hover: { mode: null },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: false,
+        mode: null,
+        boxWidth: 0,
+        boxHeight: 0,
+      },
+    },
   };
 };
 
