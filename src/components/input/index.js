@@ -22,6 +22,7 @@ const Input = forwardRef(
       autoComplete = null,
       id = null,
       dropdownPosition = "left",
+      maxlength,
     },
     ref
   ) => {
@@ -76,6 +77,7 @@ const Input = forwardRef(
           onClick={onClick}
           value={value}
           ref={ref}
+          maxlength={maxlength}
         />
 
         {icon ? (

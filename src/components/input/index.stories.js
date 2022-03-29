@@ -116,6 +116,7 @@ Default.args = {
   className: "@pg p-1 pl-10",
   dropdownItems: DropdownItems,
   dropdownContainerClasses: "",
+  maxlength: 10,
 };
 
 export const WithAllIcons = Template.bind({});

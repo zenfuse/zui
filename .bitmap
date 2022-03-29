@@ -225,7 +225,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/input@0.0.119": {
+    "nightcoder.zui/src/components/input@0.0.120": {
         "files": [
             {
                 "name": "index.js",
@@ -1512,7 +1512,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/ui/form-input@0.0.110": {
+    "nightcoder.zui/src/components/ui/form-input@0.0.111": {
         "files": [
             {
                 "name": "index.js",
