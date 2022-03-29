@@ -159,7 +159,7 @@ import Pencil from "./icons/Pencil";
 import Wallet from "./icons/Wallet";
 import ProfileInCircle from "./icons/ProfileInCircle";
 import FilledCheck from "./icons/FilledCheck";
-import Tiktok from "./icons/Tiktok";
+import Tiktok from "./icons/TikTok";
 import Smile from "./icons/Smile";
 import SimpleArrow from "./icons/SimpleArrow";
 import Like from "./icons/Like";
@@ -179,6 +179,9 @@ import NotificationSuccess from "./icons/NotificationSuccess";
 import NotificationError from "./icons/NotificationError";
 import NotificationWarning from "./icons/NotificationWarning";
 import LogoWithoutLine from "./icons/LogoWithoutLine";
+import FilledCoin from "./icons/FilledCoin";
+import FilledWallet from "./icons/FilledWallet";
+import QuestionCircle from "./icons/QuestionCircle";
 
 export const icons = {
   Bin,
@@ -360,6 +363,9 @@ export const icons = {
   NotificationError,
   NotificationWarning,
   LogoWithoutLine,
+  FilledCoin,
+  FilledWallet,
+  QuestionCircle,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
