@@ -182,6 +182,7 @@ import LogoWithoutLine from "./icons/LogoWithoutLine";
 import FilledCoin from "./icons/FilledCoin";
 import FilledWallet from "./icons/FilledWallet";
 import QuestionCircle from "./icons/QuestionCircle";
+import AirBaloon from "./icons/AirBaloon";
 
 export const icons = {
   Bin,
@@ -366,6 +367,7 @@ export const icons = {
   FilledCoin,
   FilledWallet,
   QuestionCircle,
+  AirBaloon,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
