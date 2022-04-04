@@ -1,9 +1,13 @@
 {
   "links": [
     { "linkTitle": "About Us", "linkTo": "/about-us" },
-    { "linkTitle": "Partners", "linkTo": "/partners" },
     { "linkTitle": "Bridge", "linkTo": "https://bridge.zenfuse.io/" },
-    { "linkTitle": "Token", "linkTo": "/token" }
+    { "linkTitle": "Token", "linkTo": "/token" },
+    {
+      "linkTitle": "Meta",
+      "linkTo": "/meta",
+      "icon": "/assets/images/meta-navbar-icon.png"
+    }
   ],
   "buttonsArray": [
     {

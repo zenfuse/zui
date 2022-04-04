@@ -46,7 +46,7 @@ const Button = (props) => {
       case "confetti":
         className += confettiBaseClasses;
         break;
-      case "action": 
+      case "action":
         className += actionBaseClasses;
         break;
     }
@@ -100,6 +100,7 @@ const addBaseClassesVariants = [
   "gray-solid",
   "blur-primary",
   "text",
+  "action",
 ];
 
 const baseClasses = `
@@ -201,14 +202,8 @@ const confettiBaseClasses = `
 
 const actionBaseClasses = `
   action-button
-  @pg px-9 py-3
-  border
+  @brw border
   @brr rounded-10px
-  @ftf font-family-rubik-medium
   @ttc text-white
-  @fts text-18px
-  @leh leading-24px
-  cursor-pointer
-  transition
-  @tndn duration-200
+  @bdo
 `;

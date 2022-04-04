@@ -159,7 +159,7 @@ import Pencil from "./icons/Pencil";
 import Wallet from "./icons/Wallet";
 import ProfileInCircle from "./icons/ProfileInCircle";
 import FilledCheck from "./icons/FilledCheck";
-import Tiktok from "./icons/TikTok";
+import Tiktok from "./icons/Tiktok";
 import Smile from "./icons/Smile";
 import SimpleArrow from "./icons/SimpleArrow";
 import Like from "./icons/Like";
@@ -183,6 +183,7 @@ import FilledCoin from "./icons/FilledCoin";
 import FilledWallet from "./icons/FilledWallet";
 import QuestionCircle from "./icons/QuestionCircle";
 import AirBaloon from "./icons/AirBaloon";
+import BurgerThin from "./icons/BurgerThin";
 
 export const icons = {
   Bin,
@@ -368,6 +369,7 @@ export const icons = {
   FilledWallet,
   QuestionCircle,
   AirBaloon,
+  BurgerThin,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
