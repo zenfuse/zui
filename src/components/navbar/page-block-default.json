@@ -6,7 +6,7 @@
     {
       "linkTitle": "Meta",
       "linkTo": "/meta",
-      "icon": "/assets/images/meta-navbar-icon.png"
+      "linkIcon": "/assets/images/meta-navbar-icon.png"
     }
   ],
   "buttonsArray": [

@@ -58,7 +58,7 @@ const Navbar = ({
           </Link>
           <div className="hidden justify-center lg:flex w-fit gap-10 relative items-center">
             {links?.length
-              ? links.map(({ linkTo, linkTitle, icon }, index) => {
+              ? links.map(({ linkTo, linkTitle, linkIcon }, index) => {
                   const isActive = router.pathname.includes(linkTo);
 
                   return (
@@ -68,10 +68,10 @@ const Navbar = ({
                       variant="text"
                       className="group h-full px-1 flex items-center justify-center gap-2"
                     >
-                      {icon ? (
+                      {linkIcon ? (
                         <img
                           className="w-4 h-4 object-contain"
-                          src={getSrc(icon)}
+                          src={getSrc(linkIcon)}
                         />
                       ) : null}
                       <P

@@ -253,7 +253,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/navbar@0.0.186": {
+    "nightcoder.zui/src/components/navbar@0.0.187": {
         "files": [
             {
                 "name": "index.js",
