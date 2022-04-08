@@ -82,7 +82,7 @@ const Input = forwardRef(
           onClick={onClick}
           value={value}
           ref={ref}
-          maxlength={maxLength}
+          maxLength={maxLength}
         />
 
         {icon ? (

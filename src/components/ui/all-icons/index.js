@@ -184,6 +184,7 @@ import FilledWallet from "./icons/FilledWallet";
 import QuestionCircle from "./icons/QuestionCircle";
 import AirBaloon from "./icons/AirBaloon";
 import BurgerThin from "./icons/BurgerThin";
+import ThickPlus from "./icons/ThickPlus";
 
 export const icons = {
   Bin,
@@ -370,6 +371,7 @@ export const icons = {
   QuestionCircle,
   AirBaloon,
   BurgerThin,
+  ThickPlus,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
