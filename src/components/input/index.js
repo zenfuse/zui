@@ -19,6 +19,7 @@ const Input = forwardRef(
       className = "",
       iconClassName = "",
       dropdownContainerClasses = "",
+      containerClassName = "",
       autoComplete = null,
       id = null,
       dropdownPosition = "left",
@@ -53,6 +54,10 @@ const Input = forwardRef(
       : getClassName(baseClasses, unlockedClassName, false);
 
     const srClasses = useStyleRewriter(blockedClasses, className);
+    const containerClasses = useStyleRewriter(
+      baseContainerClassName,
+      containerClassName
+    );
 
     const baseDropdownContainerClasses = `@wh w-full @mn mt-1 @ht h-200px @ow overflow-y-scroll ${
       dropdownPosition === "right" ? "@it left-auto right-0" : "@it inset-x-0"
@@ -65,7 +70,7 @@ const Input = forwardRef(
     );
 
     return (
-      <div ref={inputContainerRef} className="w-full relative">
+      <div ref={inputContainerRef} className={containerClasses}>
         <input
           placeholder={placeholder}
           autoComplete={autoComplete}
@@ -121,6 +126,8 @@ const classesByType = {
   select: `@cr cursor-pointer`,
   text: `@cr cursor-text`,
 };
+
+const baseContainerClassName = `w-full relative`;
 
 const iconBaseClassName = `
   @pn absolute
