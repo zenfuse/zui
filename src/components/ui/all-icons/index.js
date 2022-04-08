@@ -122,6 +122,7 @@ import Earth from "./icons/Earth";
 import NarrowArrow from "./icons/NarrowArrow";
 import DnD from "./icons/DnD";
 import UserIcon from "./icons/UserIcon";
+import UserIconFill from "./icons/UserIconFill";
 import KeyThin from "./icons/KeyThin";
 import Edit from "./icons/Edit";
 import ExternalLink from "./icons/ExternalLink";
@@ -309,6 +310,7 @@ export const icons = {
   NarrowArrow,
   DnD,
   UserIcon,
+  UserIconFill,
   KeyThin,
   Edit,
   ExternalLink,
