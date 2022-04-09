@@ -122,6 +122,7 @@ import Earth from "./icons/Earth";
 import NarrowArrow from "./icons/NarrowArrow";
 import DnD from "./icons/DnD";
 import UserIcon from "./icons/UserIcon";
+import UserIconFill from "./icons/UserIconFill";
 import KeyThin from "./icons/KeyThin";
 import Edit from "./icons/Edit";
 import ExternalLink from "./icons/ExternalLink";
@@ -184,6 +185,7 @@ import FilledWallet from "./icons/FilledWallet";
 import QuestionCircle from "./icons/QuestionCircle";
 import AirBaloon from "./icons/AirBaloon";
 import BurgerThin from "./icons/BurgerThin";
+import ThickPlus from "./icons/ThickPlus";
 
 export const icons = {
   Bin,
@@ -308,6 +310,7 @@ export const icons = {
   NarrowArrow,
   DnD,
   UserIcon,
+  UserIconFill,
   KeyThin,
   Edit,
   ExternalLink,
@@ -370,6 +373,7 @@ export const icons = {
   QuestionCircle,
   AirBaloon,
   BurgerThin,
+  ThickPlus,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
