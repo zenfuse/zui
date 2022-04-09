@@ -690,9 +690,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
-.m-1 {
-  margin: 0.25rem;
-}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1320,9 +1317,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-opacity-5 {
   --tw-bg-opacity: 0.05;
 }
-.bg-opacity-70 {
-  --tw-bg-opacity: 0.70;
-}
 .fill-current {
   fill: currentColor;
 }
@@ -1689,11 +1683,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shadow-red-outline {
   --tw-shadow: 0px 0px 0px 4px rgba(255, 61, 46, 0.1);
   --tw-shadow-colored: 0px 0px 0px 4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .outline-none {
