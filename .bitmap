@@ -71,7 +71,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/create-notification@0.0.93": {
+    "nightcoder.zui/src/components/create-notification@0.0.94": {
         "files": [
             {
                 "name": "index.js",

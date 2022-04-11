@@ -5,7 +5,7 @@ import { isMobile } from "react-device-detect";
 
 const createNotification = (props) => {
   return toaster.notify(renderLayout(props), {
-    duration: 300000,
+    duration: 6000,
     position: isMobile ? "top" : "bottom-right",
   });
 };
