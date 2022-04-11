@@ -5,13 +5,14 @@ import { isMobile } from "react-device-detect";
 
 const createNotification = (props) => {
   return toaster.notify(renderLayout(props), {
-    duration: 6000,
+    duration: 300000,
     position: isMobile ? "top" : "bottom-right",
   });
 };
 
 export default createNotification;
 
-export const renderLayout = (props) => ({ onClose }) => (
-  <SideNotificationLayout {...props} onClose={onClose} />
-);
+export const renderLayout =
+  (props) =>
+  ({ onClose }) =>
+    <SideNotificationLayout {...props} onClose={onClose} />;
