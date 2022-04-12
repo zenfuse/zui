@@ -187,6 +187,8 @@ import AirBaloon from "./icons/AirBaloon";
 import BurgerThin from "./icons/BurgerThin";
 import ThickPlus from "./icons/ThickPlus";
 import Bell from "./icons/Bell";
+import Trading from "./icons/Trading";
+import SettingsMoreSpace from "./icons/SettingsMoreSpace";
 
 export const icons = {
   Bin,
@@ -376,6 +378,8 @@ export const icons = {
   BurgerThin,
   ThickPlus,
   Bell,
+  Trading,
+  SettingsMoreSpace,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
