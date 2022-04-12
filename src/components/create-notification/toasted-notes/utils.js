@@ -12,7 +12,7 @@ export const defaultState = {
 
 export const positionStyles = {
   top: {
-    margin: "0 auto",
+    margin: "0 8px",
     textAlign: "center",
     top: "0",
     left: "0",
@@ -28,7 +28,12 @@ export const positionStyles = {
     left: "0",
     right: "0",
   },
-  "bottom-right": { bottom: "0", right: "0" },
+  "bottom-right": {
+    bottom: "0",
+    right: "0",
+    marginRight: "30px",
+    marginBottom: "20px",
+  },
 };
 
 export const useTimeout = (callback, delay) => {

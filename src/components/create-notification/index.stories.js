@@ -5,9 +5,7 @@ import createNotification from "../create-notification";
 export default {
   component: createNotification,
   title: "Notification/CreateNotification",
-  decorators: [
-    (story) => <div className="w-64 mx-auto mt-40">{story()}</div>,
-  ],
+  decorators: [(story) => <div className="w-64 mx-auto mt-40">{story()}</div>],
 };
 
 const Template = (args) => (
@@ -24,4 +22,13 @@ Default.args = {
   message: "Hello! I am message",
   link: "/",
   iconName: "NotificationWarning",
+};
+
+export const Custom = Template.bind({});
+
+Custom.args = {
+  title: "smth",
+  titleClasses: "text-green-450",
+  message: "We have just sent you a confirmation e-mail.",
+  iconName: "NotificationSuccess",
 };

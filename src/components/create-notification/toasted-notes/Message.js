@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useTransition, animated } from "react-spring";
 import ReachAlert from "@reach/alert";
 import { useTimeout, createAnimationConfig } from "./utils";
+import { isMobile } from "react-device-detect";
 
 export const Message = ({
   id,
@@ -58,7 +59,8 @@ export const Message = ({
           style={{
             opacity: props.opacity,
             height: props.height,
-            margin: "10px",
+            marginTop: "10px",
+            marginBottom: "10px",
           }}
         >
           <animated.div

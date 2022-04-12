@@ -12,6 +12,7 @@ const createNotification = (props) => {
 
 export default createNotification;
 
-export const renderLayout = (props) => ({ onClose }) => (
-  <SideNotificationLayout {...props} onClose={onClose} />
-);
+export const renderLayout =
+  (props) =>
+  ({ onClose }) =>
+    <SideNotificationLayout {...props} onClose={onClose} />;
