@@ -189,6 +189,7 @@ import ThickPlus from "./icons/ThickPlus";
 import Bell from "./icons/Bell";
 import Trading from "./icons/Trading";
 import SettingsMoreSpace from "./icons/SettingsMoreSpace";
+import Trash from "./icons/Trash";
 
 export const icons = {
   Bin,
@@ -380,6 +381,7 @@ export const icons = {
   Bell,
   Trading,
   SettingsMoreSpace,
+  Trash,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
