@@ -13,6 +13,7 @@ const Input = forwardRef(
       type = "text",
       placeholder,
       onChange = () => null,
+      onPaste = () => null,
       blocked = 0,
       icon = "",
       Icon,
@@ -80,6 +81,7 @@ const Input = forwardRef(
           disabled={blocked ? true : false}
           onChange={onChange}
           onClick={onClick}
+          onPaste={onPaste}
           value={value}
           ref={ref}
           maxLength={maxLength}
