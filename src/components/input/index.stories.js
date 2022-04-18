@@ -116,6 +116,7 @@ Default.args = {
   className: "@pg p-1 pl-10",
   dropdownItems: DropdownItems,
   dropdownContainerClasses: "",
+  onPaste: (e) => console.log(e.clipboardData.getData("Text")),
   maxLength: 10,
 };
 
