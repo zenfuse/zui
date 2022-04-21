@@ -774,11 +774,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .block {
   display: block;
 }
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
 }
 .grid {
   display: grid;
+}
+.contents {
+  display: contents;
 }
 .hidden {
   display: none;
@@ -1134,6 +1140,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .whitespace-nowrap {
   white-space: nowrap;
@@ -1696,6 +1707,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.\!filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
 }
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;

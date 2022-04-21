@@ -25,6 +25,7 @@ const Input = forwardRef(
       id = null,
       dropdownPosition = "left",
       maxLength,
+      ...props
     },
     ref
   ) => {
@@ -85,6 +86,7 @@ const Input = forwardRef(
           value={value}
           ref={ref}
           maxLength={maxLength}
+          {...props}
         />
 
         {icon ? (
