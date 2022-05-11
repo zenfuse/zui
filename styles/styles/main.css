@@ -70,7 +70,7 @@ html {
   -webkit-font-smoothing: antialiased !important; /*(For Chrome and Safari)*/
 }
 
-/* ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -1688,6 +1688,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow-colored: 0px 0px 0px 4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2106,6 +2111,34 @@ em {
 
   100% {
     filter: hue-rotate(0deg);
+  }
+}
+
+.glassmorphism {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+@supports (background: -moz-element(#toast-message)) and
+  (not ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)))) {
+  .glassmorphism {
+    position: relative;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+  }
+
+  .glassmorphism::before {
+    background-attachment: fixed;
+    /* background-image: -moz-element(#toast-message); */
+    background-image: -moz-element(#toast-message);
+    filter: blur(20px);
+    margin: -20px;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 49;
   }
 }
 
