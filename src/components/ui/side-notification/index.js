@@ -16,7 +16,7 @@ const SideNotificationLayout = ({
 }) => {
   return (
     <BackdropFilter
-      filter={"blur(20px)"}
+      filter={isMobile ? "" : "blur(20px)"}
       canvasFallback={true}
       logging={false}
       className="rounded-10px"
@@ -25,7 +25,6 @@ const SideNotificationLayout = ({
       }}
     >
       <div
-        style={{ backdropFilter: isMobile && "none" }}
         className={`w-auto md:w-360px z-50 shadow-lg rounded-10px group px-5 py-3 flex flex-col gap-1 border border-true-gray-150 ${
           isMobile && `bg-white dark:bg-true-gray-750`
         }`}

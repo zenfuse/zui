@@ -792,9 +792,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-4 {
   height: 1rem;
 }
-.h-\[150vh\] {
-  height: 150vh;
-}
 .h-full {
   height: 100%;
 }
