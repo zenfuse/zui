@@ -190,6 +190,14 @@ import Bell from "./icons/Bell";
 import Trading from "./icons/Trading";
 import SettingsMoreSpace from "./icons/SettingsMoreSpace";
 import Trash from "./icons/Trash";
+import Account from "./icons/Account";
+import Authentication from "./icons/Authentication";
+import Chain from "./icons/Chain";
+import TwitterColored from "./icons/TwitterColored";
+import InstagramColored from "./icons/InstagramColored";
+import TelegramColored from "./icons/TelegramColored";
+import TikTokColored from "./icons/TikTokColored";
+import YoutubeColored from "./icons/YoutubeColored";
 
 export const icons = {
   Bin,
@@ -382,6 +390,14 @@ export const icons = {
   Trading,
   SettingsMoreSpace,
   Trash,
+  Account,
+  Authentication,
+  Chain,
+  TwitterColored,
+  InstagramColored,
+  TelegramColored,
+  TikTokColored,
+  YoutubeColored,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {
