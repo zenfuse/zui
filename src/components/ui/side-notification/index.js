@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 import AllIcons from "../all-icons";
 import Link from "next/link";
@@ -16,9 +16,9 @@ const SideNotificationLayout = ({
 }) => {
   return (
     <div
-      style={{ backdropFilter: isMobile ? "none" : "blur(20px)" }}
+      // style={{ backdropFilter: isMobile ? "none" : "blur(20px)" }}
       className={`w-auto md:w-360px z-50 shadow-lg rounded-10px group px-5 py-3 flex flex-col gap-1 border border-true-gray-150 ${
-        isMobile && `bg-white dark:bg-true-gray-750`
+        isMobile ? `bg-white dark:bg-true-gray-750` : `backdrop-blur`
       }`}
     >
       <div className="flex flex-row items-center justify-between">
