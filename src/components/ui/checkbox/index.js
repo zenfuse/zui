@@ -9,6 +9,7 @@ const Checkbox = ({
   className = "",
   id = null,
   activeClassName = "",
+  readOnly = false,
 }) => {
   const srClasses = useStyleRewriter(baseClasses, className);
   const activeSrClasses = useStyleRewriter(baseActiveClasses, activeClassName);
@@ -27,6 +28,7 @@ const Checkbox = ({
         className="hidden"
         onChange={onChange}
         checked={active}
+        readOnly={readOnly}
       />
     </label>
   );
