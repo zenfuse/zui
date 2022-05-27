@@ -69,25 +69,24 @@ export const POSITIONS = {
   "bottom-right": "bottom-right",
 };
 
-export const createAnimationConfig = (position, container, onRest) => {
+export const createAnimationConfig = (position, onRest) => {
   const isFromTop = position.includes("top");
 
   const animation = {
     config: config.default,
     from: {
-      opacity: 1,
-      height: 0,
+      opacity: 0,
+      height: "0px",
       transform: `translateY(${isFromTop ? "-100%" : 0}) scale(1)`,
     },
-    enter: () => (next) =>
-      next({
-        opacity: 1,
-        height: container.current.getBoundingClientRect().height,
-        transform: `translateY(0) scale(1)`,
-      }),
+    enter: {
+      opacity: 1,
+      height: "60px",
+      transform: `translateY(0) scale(1)`,
+    },
     leave: {
       opacity: 0,
-      height: 0,
+      height: "0px",
       transform: `translateY(0 scale(0.9)`,
     },
     onRest,

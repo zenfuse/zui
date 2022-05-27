@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useTransition, animated } from "react-spring";
 import ReachAlert from "@reach/alert";
 import { useTimeout, createAnimationConfig } from "./utils";
-import { isMobile } from "react-device-detect";
 
 export const Message = ({
   id,
@@ -12,7 +11,6 @@ export const Message = ({
   requestClose = false,
   duration = 30000,
 }) => {
-  const container = useRef(null);
   const [timeout, setTimeout] = useState(duration);
   const [localShow, setLocalShow] = useState(true);
 
@@ -45,7 +43,7 @@ export const Message = ({
 
   useTimeout(onClose, timeout);
 
-  const animation = createAnimationConfig(position, container, onRest);
+  const animation = createAnimationConfig(position, onRest);
 
   const transition = useTransition(localShow, animation);
 
@@ -68,7 +66,6 @@ export const Message = ({
               transform: props.transform,
               pointerEvents: "auto",
             }}
-            ref={container}
             className="Toaster__message-wrapper"
           >
             <ReachAlert>{renderMessage()}</ReachAlert>
