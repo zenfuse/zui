@@ -7,8 +7,6 @@ import Portfolio from "./icons/Portfolio";
 import Orders from "./icons/Orders";
 import Markets from "./icons/Markets";
 import Settings from "./icons/Settings";
-import Light from "./icons/Light";
-import Dark from "./icons/Dark";
 import Notification from "./icons/Notification";
 import Chevron from "./icons/Chevron";
 import Profile from "./icons/Profile";
@@ -198,6 +196,8 @@ import InstagramColored from "./icons/InstagramColored";
 import TelegramColored from "./icons/TelegramColored";
 import TikTokColored from "./icons/TikTokColored";
 import YoutubeColored from "./icons/YoutubeColored";
+import Sun from "./icons/Sun";
+import Moon from "./icons/Moon";
 
 export const icons = {
   Bin,
@@ -240,8 +240,6 @@ export const icons = {
   Portfolio,
   Markets,
   Settings,
-  Light,
-  Dark,
   Notification,
   Chevron,
   Profile,
@@ -398,6 +396,8 @@ export const icons = {
   TelegramColored,
   TikTokColored,
   YoutubeColored,
+  Sun,
+  Moon,
 };
 
 const AllIcons = ({ name = "", className = "", ...props }) => {

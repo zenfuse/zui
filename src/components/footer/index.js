@@ -4,9 +4,7 @@ import Row from "../ui/row";
 import FooterColumn from "./footer-column";
 import FooterMenuLink from "./footer-menu-link";
 import FooterMenuTitle from "./footer-menu-title";
-import CircleDivider from "../ui/circle-divider";
 import SmartButton from "../smart-button";
-import * as R from "ramda";
 import { getSrc } from "../../functions/utils/vanilla-utils";
 
 const clientBaseUrl =
@@ -23,21 +21,20 @@ const Footer = ({ pageBlockData, absoluteUrl = false }) => {
       <Container>
         <Row>
           <div className="flex grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 sm:gap-6 grid-flow-row pb-6 pt-12 relative w-full">
-            {columns && !R.isEmpty(columns)
-              ? columns.map((item, index) => (
-                  <FooterColumn baseUrl={baseUrl} {...item} key={index} />
-                ))
-              : null}
+            {columns?.length &&
+              columns.map((item, index) => (
+                <FooterColumn {...item} baseUrl={baseUrl} key={index} />
+              ))}
             <div className="flex flex-col col-span-2">
               <FooterMenuTitle title="Social" />
-              {socialLinks && !R.isEmpty(socialLinks) ? (
+              {socialLinks?.length && (
                 <div className="w-full flex items-start mt-5 gap-4">
                   {socialLinks.map((socialLink, index) => (
                     <SmartButton
                       key={index}
                       className="@fx flex @ani items-center @jyc justify-center @wh w-5 @ht h-5 @fxs -0 @oy opacity-40 hover:opacity-100 @tndn duration-200"
-                      href={R.prop("linkTo", socialLink) || "/"}
-                      linkProps={R.prop("linkProps", socialLink)}
+                      href={socialLink?.linkTo || "/"}
+                      linkProps={socialLink?.linkProps}
                     >
                       <img
                         src={getSrc(socialLink.icon)}
@@ -46,26 +43,22 @@ const Footer = ({ pageBlockData, absoluteUrl = false }) => {
                     </SmartButton>
                   ))}
                 </div>
-              ) : null}
+              )}
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-3 content-center sm:justify-items-center pb-3 pt-6 relative w-full border-t border-gray-light">
+          <div className="grid grid-cols-1 gap-3 content-center sm:justify-items-center pb-3 pt-6 relative w-full">
             <img src="/assets/images/logo-2.0.svg" className="w-100px mb-4" />
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center text-center w-full">
-              {bottomLinks && !R.isEmpty(bottomLinks)
-                ? bottomLinks.map((item, index) => (
-                    <Fragment key={index}>
-                      <FooterMenuLink
-                        {...item}
-                        baseUrl={baseUrl}
-                        className="text-true-gray-800 @fts  hover:text-black duration-200 py-1 sm:py-0"
-                      />
-                      {index < bottomLinks.length - 1 ? (
-                        <CircleDivider className="hidden sm:block" />
-                      ) : null}
-                    </Fragment>
-                  ))
-                : null}
+              {bottomLinks?.length &&
+                bottomLinks.map((item, index) => (
+                  <Fragment key={index}>
+                    <FooterMenuLink
+                      {...item}
+                      baseUrl={baseUrl}
+                      className="text-true-gray-800 @fts hover:text-black duration-200 py-1 sm:py-0"
+                    />
+                  </Fragment>
+                ))}
             </div>
             <FooterMenuLink linkTitle={copyrigths} />
           </div>
@@ -192,8 +185,7 @@ const pageBlockDataDefault = {
   copyrigths: "© 2022 Zenfuse.io | All rights reserved ",
   socialLinks: [
     {
-      icon:
-        "https://zfblob1.blob.core.windows.net/zfblob1container1/website/telegram_c676f4dc9e.svg",
+      icon: "https://zfblob1.blob.core.windows.net/zfblob1container1/website/telegram_c676f4dc9e.svg",
       title: "Telegram | News",
       linkTo: "http://t.me/zenfuse",
       linkProps: [
@@ -204,8 +196,7 @@ const pageBlockDataDefault = {
       ],
     },
     {
-      icon:
-        "https://zfblob1.blob.core.windows.net/zfblob1container1/website/twitter_19140a0a5f.svg",
+      icon: "https://zfblob1.blob.core.windows.net/zfblob1container1/website/twitter_19140a0a5f.svg",
       title: "Twitter",
       linkTo: "https://twitter.com/zenfuse_io",
       linkProps: [
@@ -216,8 +207,7 @@ const pageBlockDataDefault = {
       ],
     },
     {
-      icon:
-        "https://zfblob1.blob.core.windows.net/zfblob1container1/website/medium_5494032499.svg",
+      icon: "https://zfblob1.blob.core.windows.net/zfblob1container1/website/medium_5494032499.svg",
       title: "Medium",
       linkTo: "https://zenfuse.medium.com",
       linkProps: [
@@ -228,8 +218,7 @@ const pageBlockDataDefault = {
       ],
     },
     {
-      icon:
-        "https://zfblob1.blob.core.windows.net/zfblob1container1/website/linked_In_e2dce8077a.svg",
+      icon: "https://zfblob1.blob.core.windows.net/zfblob1container1/website/linked_In_e2dce8077a.svg",
       title: "LinkedIn",
       linkTo: "https://www.linkedin.com/company/zenfuse",
       linkProps: [
@@ -240,8 +229,7 @@ const pageBlockDataDefault = {
       ],
     },
     {
-      icon:
-        "https://zfblob1.blob.core.windows.net/zfblob1container1/website/reddit_2739d934a4.svg",
+      icon: "https://zfblob1.blob.core.windows.net/zfblob1container1/website/reddit_2739d934a4.svg",
       title: "Reddit",
       linkTo: "https://www.reddit.com/r/zenfuse",
       linkProps: [
@@ -252,8 +240,7 @@ const pageBlockDataDefault = {
       ],
     },
     {
-      icon:
-        "https://zfblob1.blob.core.windows.net/zfblob1container1/website/reddit_2739d934a4.svg",
+      icon: "https://zfblob1.blob.core.windows.net/zfblob1container1/website/reddit_2739d934a4.svg",
       title: "Reddit",
       linkTo: "https://www.reddit.com/r/zenfuse",
       linkProps: [

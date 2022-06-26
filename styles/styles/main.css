@@ -1191,9 +1191,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-px {
   border-width: 1px;
 }
-.border-t {
-  border-top-width: 1px;
-}
 .border-b-px {
   border-bottom-width: 1px;
 }
@@ -2297,10 +2294,6 @@ em {
 
   .sm\:top-40px {
     top: 40px;
-  }
-
-  .sm\:block {
-    display: block;
   }
 
   .sm\:max-h-300px {
