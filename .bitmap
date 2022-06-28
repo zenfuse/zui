@@ -192,21 +192,11 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "nightcoder.zui/src/components/footer@0.0.66": {
+    "nightcoder.zui/src/components/footer@0.0.68": {
         "files": [
             {
                 "name": "index.js",
-                "relativePath": "src/components/footer/footer-column/index.js",
-                "test": false
-            },
-            {
-                "name": "index.js",
                 "relativePath": "src/components/footer/footer-menu-link/index.js",
-                "test": false
-            },
-            {
-                "name": "index.js",
-                "relativePath": "src/components/footer/footer-menu-title/index.js",
                 "test": false
             },
             {

@@ -1,69 +1,94 @@
-import React, { Fragment } from "react";
-import Container from "../ui/container";
+import React from "react";
 import Row from "../ui/row";
-import FooterColumn from "./footer-column";
 import FooterMenuLink from "./footer-menu-link";
-import FooterMenuTitle from "./footer-menu-title";
-import SmartButton from "../smart-button";
 import { getSrc } from "../../functions/utils/vanilla-utils";
+import Link from "next/link";
+import AllIcons from "../ui/all-icons";
 
 const clientBaseUrl =
   process.env.NEXT_PUBLIC_CLIENT_BASE_URL || "https://zenfuse.io";
 
-const Footer = ({ pageBlockData, absoluteUrl = false }) => {
+const Footer = ({ pageBlockData, absoluteUrl = false, containerClasses }) => {
   const { columns, bottomLinks, copyrigths, socialLinks } =
     pageBlockData || pageBlockDataDefault;
 
   const baseUrl = absoluteUrl ? clientBaseUrl : "";
 
   return (
-    <section className="bg-white overflow-hidden relative w-full">
-      <Container>
-        <Row>
-          <div className="flex grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 sm:gap-6 grid-flow-row pb-6 pt-12 relative w-full">
-            {columns?.length &&
-              columns.map((item, index) => (
-                <FooterColumn {...item} baseUrl={baseUrl} key={index} />
-              ))}
-            <div className="flex flex-col col-span-2">
-              <FooterMenuTitle title="Social" />
-              {socialLinks?.length && (
-                <div className="w-full flex items-start mt-5 gap-4">
-                  {socialLinks.map((socialLink, index) => (
-                    <SmartButton
-                      key={index}
-                      className="@fx flex @ani items-center @jyc justify-center @wh w-5 @ht h-5 @fxs -0 @oy opacity-40 hover:opacity-100 @tndn duration-200"
-                      href={socialLink?.linkTo || "/"}
-                      linkProps={socialLink?.linkProps}
+    <section
+      className={`bg-white dark:bg-true-gray-950 overflow-hidden relative w-full py-12 ${containerClasses}`}
+    >
+      <div className="mx-auto overflow-visible relative max-w-[1440px]">
+        <Row className="@fxw @dy flex flex-col-reverse lg:grid lg:grid-cols-7 gap-8 sm:gap-6 justify-between @ani items-start">
+          <div className="flex flex-col lg:col-span-2 gap-4">
+            <div className="flex gap-3">
+              <AllIcons name="CircleLogo" className="w-7" />
+              <AllIcons
+                name="ZenfuseTitle"
+                className="w-24 text-black dark:text-white -translate-y-px"
+              />
+            </div>
+            <p className="font-family-rubik text-14px leading-20px text-true-gray-450">
+              Transforming сryptocurreny trading
+            </p>
+            {socialLinks?.length ? (
+              <div className="w-full flex items-start gap-4">
+                {socialLinks.map((socialLink, index) => (
+                  <Link key={index} href={socialLink?.linkTo || "/"} passHref>
+                    <a
+                      target="_blank"
+                      className="flex items-center justify-center w-5 h-5 opacity-40 hover:opacity-100 duration-100"
                     >
-                      <img
-                        src={getSrc(socialLink.icon)}
-                        className="w-full h-full"
-                      />
-                    </SmartButton>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-          <div className="grid grid-cols-1 gap-3 content-center sm:justify-items-center pb-3 pt-6 relative w-full">
-            <img src="/assets/images/logo-2.0.svg" className="w-100px mb-4" />
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center text-center w-full">
-              {bottomLinks?.length &&
-                bottomLinks.map((item, index) => (
-                  <Fragment key={index}>
-                    <FooterMenuLink
-                      {...item}
-                      baseUrl={baseUrl}
-                      className="text-true-gray-800 @fts hover:text-black duration-200 py-1 sm:py-0"
-                    />
-                  </Fragment>
+                      {socialLink?.icon && (
+                        <img
+                          src={getSrc(socialLink.icon)}
+                          className="w-full h-full"
+                        />
+                      )}
+                    </a>
+                  </Link>
                 ))}
-            </div>
-            <FooterMenuLink linkTitle={copyrigths} />
+              </div>
+            ) : null}
+            {copyrigths && (
+              <p className="font-family-rubik text-14px leading-20px text-true-gray-450">
+                {copyrigths}
+              </p>
+            )}
+            {bottomLinks?.length ? (
+              <div className="flex gap-3">
+                {bottomLinks.map((item, index) => (
+                  <FooterMenuLink {...item} key={index} baseUrl={baseUrl} />
+                ))}
+              </div>
+            ) : null}
           </div>
+          {columns?.length ? (
+            <div className="w-full grid grid-cols-2 md:grid-cols-5 gap-8 sm:gap-6 grid-flow-row relative lg:col-span-5">
+              {columns.map((item, index) => (
+                <div key={index} className="flex flex-col">
+                  {item?.title && (
+                    <h4 className="font-family-rubik-medium text-black dark:text-white text-16px leading-20px">
+                      {item.title}
+                    </h4>
+                  )}
+                  {item?.links?.length ? (
+                    <div className="w-full flex flex-col gap-2 mt-5">
+                      {item?.links.map((item, index) => (
+                        <FooterMenuLink
+                          {...item}
+                          baseUrl={baseUrl}
+                          key={index}
+                        />
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          ) : null}
         </Row>
-      </Container>
+      </div>
     </section>
   );
 };
@@ -73,11 +98,22 @@ export default Footer;
 const pageBlockDataDefault = {
   columns: [
     {
+      title: "Platform",
+      links: [
+        { linkTitle: "Profile", linkTo: "https://app.zenfuse.io" },
+        { linkTitle: "Overview", linkTo: "https://app.zenfuse.io/overview" },
+        { linkTitle: "Trading", linkTo: "https://app.zenfuse.io/trading" },
+        { linkTitle: "Panic sell", linkTo: "https://app.zenfuse.io/panic-sell" },
+      ],
+    },
+    {
       title: "Company",
       links: [
-        { linkTitle: "About us", linkTo: "/about-us" },
-        { linkTitle: "Partners", linkTo: "/partners" },
+        { linkTitle: "Home", linkTo: "/about-us" },
+        { linkTitle: "About us", linkTo: "/partners" },
+        { linkTitle: "Bridge", linkTo: "/token" },
         { linkTitle: "Token", linkTo: "/token" },
+        { linkTitle: "Meta", linkTo: "/token" },
       ],
     },
     {
@@ -108,7 +144,7 @@ const pageBlockDataDefault = {
       ],
     },
     {
-      title: "Communities",
+      title: "Our communities",
       links: [
         {
           linkTitle: "English",
@@ -179,8 +215,8 @@ const pageBlockDataDefault = {
     },
   ],
   bottomLinks: [
-    { linkTitle: "Terms of Use", linkTo: "/terms-of-use" },
     { linkTitle: "Privacy Policy", linkTo: "/privacy-policy" },
+    { linkTitle: "Terms & Conditions", linkTo: "/terms-of-use" },
   ],
   copyrigths: "© 2022 Zenfuse.io | All rights reserved ",
   socialLinks: [
